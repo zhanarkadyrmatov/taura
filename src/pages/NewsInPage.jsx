@@ -192,7 +192,9 @@ function NewsInPage() {
             standard...
           </p>
         </div>
-        <CliderScroll props={Slide} />
+        <div className="mb-40px lg:mb-[70px] xl:mb-[140px]">
+          <CliderScroll props={Slide} />
+        </div>
       </main>
       <FooterComponent />
     </>

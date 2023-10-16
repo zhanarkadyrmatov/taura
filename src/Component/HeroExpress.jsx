@@ -24,7 +24,7 @@ function HeroExpress() {
             </p>
             <div className="lg:flex lg:gap-[104px]">
               <div className="xl:hidden flex flex-col xl:items-center gap-[30px] xl:gap-[114px]">
-                <div className="xl:flex-1 text-[#fff] font-AtypDisplay">
+                <div className="text-[#fff] font-AtypDisplay">
                   <h2 className="text-[34px] lg:text-[54px] font-normal leading-normal">
                     2000+
                   </h2>
@@ -34,16 +34,38 @@ function HeroExpress() {
                 </div>
                 <div>
                   <div className="flex items-center -space-x-10">
-                    {[1, 2, 3, 4].map((e) => {
-                      return (
-                        <Avatar
-                          variant="circular"
-                          alt="user 1"
-                          className="border-2 border-white w-[100px] h-[100px] hover:z-10 focus:z-10"
-                          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-                        />
-                      );
-                    })}
+                    <Avatar
+                      variant="circular"
+                      alt="user 1"
+                      className="w-[60px] h-[60px] lg:w-[90px] lg:h-[90px] rounded-[100px]"
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                    />
+                    <Avatar
+                      variant="circular"
+                      alt="user 2"
+                      className="w-[60px] h-[60px] lg:w-[90px] lg:h-[90px] rounded-[100px]"
+                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80"
+                    />
+                    <Avatar
+                      variant="circular"
+                      alt="user 3"
+                      className="w-[60px] h-[60px] lg:w-[90px] lg:h-[90px] rounded-[100px]"
+                      src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80"
+                    />
+                    <Avatar
+                      variant="circular"
+                      alt="user 4"
+                      className="w-[60px] h-[60px] lg:w-[90px] lg:h-[90px] rounded-[100px]"
+                      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+                    />
+                    <div
+                      variant="circular"
+                      className="relative flex w-[60px] h-[60px] lg:w-[90px] lg:h-[90px]  rounded-[100px] bg-[#D9D9D9] justify-center items-center"
+                    >
+                      <span className="text-[20px] lg:text-[36px] font-Atyp Display font-normal leading-normal">
+                        212+
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -89,12 +111,11 @@ function HeroExpress() {
                       </clipPath>
                     </defs>
                   </svg>
-                  <div className="text-[#1C1C1C] font-Ubuntu">
-                    <span className="m-0 p-0 text-[8px] lg:text-[11px] font-bold	leading-normal ">
+                  <div className="text-[#1C1C1C] font-Ubuntu flex flex-col justify-center items-start">
+                    <span className="text-[8px] lg:text-[11px] font-bold	leading-normal ">
                       ANDROID APP ON
                     </span>
-                    <br />
-                    <span className="m-0 p-0 text-[16px] lg:text-[31.533px] font-medium leading-normal">
+                    <span className="text-[16px] lg:text-[31.533px] font-medium leading-normal">
                       Google play
                     </span>
                   </div>
@@ -136,11 +157,10 @@ function HeroExpress() {
                       </clipPath>
                     </defs>
                   </svg>
-                  <div className="text-[#1C1C1C] font-Ubuntu">
+                  <div className="text-[#1C1C1C] font-Ubuntu flex flex-col justify-center items-start">
                     <span className="m-0 p-0 text-[8px] lg:text-[11px] font-bold	leading-normal">
                       Download on the
                     </span>
-                    <br />
                     <span className="m-0 p-0 text-[16px] lg:text-[31.533px] font-medium leading-normal">
                       App Store
                     </span>
@@ -159,16 +179,38 @@ function HeroExpress() {
               </div>
               <div>
                 <div className="flex items-center -space-x-10">
-                  {[1, 2, 3, 4].map((e) => {
-                    return (
-                      <Avatar
-                        variant="circular"
-                        alt="user 1"
-                        className="border-2 border-white w-[100px] h-[100px] hover:z-10 focus:z-10"
-                        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-                      />
-                    );
-                  })}
+                  <Avatar
+                    variant="circular"
+                    alt="user 1"
+                    className="w-[100px] h-[100px] rounded-[100px]"
+                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                  />
+                  <Avatar
+                    variant="circular"
+                    alt="user 2"
+                    className="w-[100px] h-[100px] rounded-[100px]"
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80"
+                  />
+                  <Avatar
+                    variant="circular"
+                    alt="user 3"
+                    className="w-[100px] h-[100px] rounded-[100px]"
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80"
+                  />
+                  <Avatar
+                    variant="circular"
+                    alt="user 4"
+                    className="w-[100px] h-[100px] rounded-[100px]"
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+                  />
+                  <div
+                    variant="circular"
+                    className="relative flex w-[100px] h-[100px] rounded-[100px] bg-[#D9D9D9] justify-center items-center"
+                  >
+                    <span className="text-[36px] font-Atyp Display font-normal leading-normal">
+                      212+
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -180,11 +222,11 @@ function HeroExpress() {
               creativeEffect={{
                 prev: {
                   shadow: true,
-                  translate: ["-120%", 0, -500],
+                  translate: ["-120%", 0, -400],
                 },
                 next: {
                   shadow: true,
-                  translate: ["120%", 0, -500],
+                  translate: ["120%", 0, -400],
                 },
               }}
               modules={[EffectCreative]}
