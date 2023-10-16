@@ -54,6 +54,13 @@
   background-size: cover;
 }
 
+.price {
+  background-image: url("./assets/pricebg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .accordion {
   background-image: url("./assets/acorEx.png");
   background-position: center;
@@ -62,6 +69,26 @@
   /* background-size: 85% 100%; */
   /* padding: 20px 0 50px;
   margin: 0px 0 30px; */
+}
+
+@media only screen and (min-width: 1140px) {
+  .card_bg {
+    background-image: url("./assets/Ellipse\ 379.png");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+    z-index: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+  }
+  .card_bg1 {
+    background-image: url("./assets/Ellipse\ 379.png");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: right;
+    z-index: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) {

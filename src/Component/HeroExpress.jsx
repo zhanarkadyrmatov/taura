@@ -1,12 +1,18 @@
 import React from "react";
 import Express2 from "../assets/Express1.png";
+import Express3 from "../assets/slideEx2.png";
+import Express4 from "../assets/slideEx3.png";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Avatar } from "@material-tailwind/react";
+import "swiper/css";
+import "swiper/css/effect-creative";
+import { EffectCreative } from "swiper/modules";
 
 function HeroExpress() {
   return (
     <div className="bg-[#1C1C1C] pb-[50px] pt-[40px] lg:pt-[70px] xl:pt-0">
       <div className="container">
-        <div className="xl:grid xl:grid-cols-2  xl:gap-[100px] items-center">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-[100px] items-center">
           <div>
             <h1 className="2xl:text-[96px] lg:text-[90px] text-[40px] text-white font-Atyp-Display font-normal">
               Dui sapien aliquet aliquam
@@ -167,8 +173,33 @@ function HeroExpress() {
               </div>
             </div>
           </div>
-          <div className=" hidden xl:block">
-            <img src={Express2} alt="" />
+          <div className=" hidden xl:block w-full">
+            <Swiper
+              grabCursor={true}
+              effect={"creative"}
+              creativeEffect={{
+                prev: {
+                  shadow: true,
+                  translate: ["-120%", 0, -500],
+                },
+                next: {
+                  shadow: true,
+                  translate: ["120%", 0, -500],
+                },
+              }}
+              modules={[EffectCreative]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img src={Express2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={Express3} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={Express4} alt="" />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

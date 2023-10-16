@@ -8,6 +8,7 @@ import { FreeMode, Pagination } from "swiper/modules";
 
 import Union from "../assets/Union.png";
 import icon from "../assets/card_icon.png";
+import { NavLink } from "react-router-dom";
 
 const Items = [
   {
@@ -84,18 +85,15 @@ function CardComponent() {
               <SwiperSlide key={e.id} className="w-[100%]">
                 <div className="w-[100%] icon relative">
                   <img className="w-full rounded-[15px]" src={e.img} alt="" />
-
-                  {/* <div className="absolute bottom-0 right-0 xl:pl-[20px] xl:py-[25px] rounded-tl-[40px]  bg-white"> */}
                   <span className="p-1 lg:p-[10px] bg-white rounded-[15px] absolute bottom-0 right-0">
-                    <a className=" cursor-pointer" href="#">
+                    <NavLink className=" cursor-pointer" to={"/news/:id"}>
                       <img
-                        className="bg-black p-[15px] rounded-[15px] xl:w-[80px] xl:h-[80px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]"
+                        className="bg-black p-[15px] rounded-[15px] xl:w-[90px] xl:h-[90px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]"
                         src={icon}
                         alt=""
                       />
-                    </a>
+                    </NavLink>
                   </span>
-                  {/* </div> */}
                 </div>
                 <h2 className="text-dark font-AtypDisplay text-[16px] lg:text-[20px] xl:text-[30px] lg:mt-[30px] mt-[10px]  leading-[185%]">
                   {e.name}

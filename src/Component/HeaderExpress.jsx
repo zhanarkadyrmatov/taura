@@ -15,7 +15,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Logo from "../assets/express.png";
 import Language from "../assets/language.png";
 import { RiMenu3Fill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const products = [
   {
@@ -35,18 +35,6 @@ const products = [
     description: "Your customers’ data will be safe and secure",
     href: "#",
     icon: FingerPrintIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
   },
 ];
 
@@ -71,9 +59,9 @@ export default function HeaderComponent() {
           aria-label="Global"
         >
           <div className="">
-            <Link to="/" className="">
+            <NavLink to="/" className="">
               <img className="w-[133px] lg:w-[242px]" src={Logo} alt="" />
-            </Link>
+            </NavLink>
           </div>
           <div className="flex xl:hidden">
             <button
@@ -125,44 +113,44 @@ export default function HeaderComponent() {
                 </Popover.Panel>
               </Transition>
             </Popover>
-            <Link
+            <NavLink
               to="/services"
               className="text-[20px] font-medium font-[Ubuntu]  text-white"
             >
               Услуги
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to={"/company"}
               className="text-[20px] font-medium font-[Ubuntu]  text-white"
             >
               О нас
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to={"/news"}
               className="text-[20px] font-medium font-[Ubuntu]  text-white"
             >
               Новости
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to={"/contact"}
               className="text-[20px] font-medium font-[Ubuntu]  text-white"
             >
               Контакты
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to={"/question"}
               className="text-[20px] font-medium font-[Ubuntu]  text-white"
             >
               Вопросы
-            </Link>
+            </NavLink>
           </Popover.Group>
           <div className="hidden xl:flex xl:justify-center xl:items-center xl:gap-[20px]">
-            <Link
+            <NavLink
               to={"/tauraexpress"}
               className="text-[22px] font-medium  text-[#067DF6]"
             >
               Taura Express
-            </Link>
+            </NavLink>
             <Popover className="relative bg-[#F0F0F0] py-[10px] px-[20px] rounded-[30px]">
               <Popover.Button className="flex items-center gap-x-1 text-[20px] font-medium font-[Ubuntu] text-black">
                 <img src={Language} alt="" />
@@ -225,9 +213,9 @@ export default function HeaderComponent() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <Link to={"/"}>
+                <NavLink to={"/"}>
                   <img className="h-8 w-auto" src={Logo} alt="" />
-                </Link>
+                </NavLink>
               </a>
               <button
                 type="button"
@@ -240,12 +228,12 @@ export default function HeaderComponent() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="xl:hidden my-[20px] flex justify-center items-center gap-[20px]">
-                  <Link
+                  <NavLink
                     to={"/tauraexpress"}
                     className="text-[20px] font-medium  text-[#1355A3]"
                   >
                     Taura Express
-                  </Link>
+                  </NavLink>
                   <Popover className="relative bg-[#F0F0F0] py-[10px] px-[20px] rounded-[30px]">
                     <Popover.Button className="flex items-center gap-x-1 text-[18px] font-medium font-[Ubuntu] text-black">
                       <img src={Language} alt="" />
@@ -344,7 +332,7 @@ export default function HeaderComponent() {
                       }}
                       className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center shadow p-[10px]"
                     >
-                      <Link to="/services">Услуги</Link>
+                      <NavLink to="/services">Услуги</NavLink>
                     </li>
                     <li
                       style={{
@@ -352,7 +340,7 @@ export default function HeaderComponent() {
                       }}
                       className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                     >
-                      <Link to={"/company"}>О нас</Link>
+                      <NavLink to={"/company"}>О нас</NavLink>
                     </li>
                     <li
                       style={{
@@ -360,7 +348,23 @@ export default function HeaderComponent() {
                       }}
                       className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                     >
-                      <Link to={"/news"}>Новости</Link>
+                      <NavLink to={"/news"}>Новости</NavLink>
+                    </li>
+                    {/* <li
+                      style={{
+                        boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.15)",
+                      }}
+                      className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
+                    >
+                      <Link>Новости</NavLink>
+                    </li> */}
+                    <li
+                      style={{
+                        boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.15)",
+                      }}
+                      className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
+                    >
+                      <NavLink to={"/contact"}>Контакты</NavLink>
                     </li>
                     <li
                       style={{
@@ -368,23 +372,7 @@ export default function HeaderComponent() {
                       }}
                       className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                     >
-                      <Link>Новости</Link>
-                    </li>
-                    <li
-                      style={{
-                        boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.15)",
-                      }}
-                      className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
-                    >
-                      <Link to={"/contact"}>Контакты</Link>
-                    </li>
-                    <li
-                      style={{
-                        boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.15)",
-                      }}
-                      className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
-                    >
-                      <Link to={"/question"}>Вопросы</Link>
+                      <NavLink to={"/question"}>Вопросы</NavLink>
                     </li>
                   </ul>
                 </div>
