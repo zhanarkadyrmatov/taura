@@ -18,10 +18,10 @@ function OrderExpress() {
     <div className="bg-[#F0F0F0] py-[40px] mt-[40px] lg:mt-[70px] xl:mt-[140px] lg:py-[70px] xl:py-[140px]">
       <div className="container">
         <div className="xl:flex xl:gap-[54px] xl:justify-between xl:items-center">
-          <h2 className="text-[#1C1C1C] xl:w-[70%] uppercase font-AtypDisplay xl:text-[55px] leading-[185%] text-[24px] lg:text-[50px]">
+          <h2 className="text-[#1C1C1C] xl:w-[70%] uppercase font-[AtypDisplay]  xl:text-[55px] leading-[185%] text-[24px] lg:text-[50px]">
             Как заказать с Китая
           </h2>
-          <p className="text-[#1C1C1C] text-[12px] mt-[6px] font-AtypDisplay xl:text-[20px] lg:text-[18px]">
+          <p className="text-[#1C1C1C] text-[12px] mt-[6px] font-[AtypDisplay]  xl:text-[20px] lg:text-[18px]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been
           </p>
@@ -156,7 +156,7 @@ function OrderExpress() {
             </div>
             <div className="card_bg flex relative justify-end flex-col items-end">
               <h2
-                className="text-[#fff] font-normal leading-normal text-right font-AtypDisplay xl:text-[40px] uppercase pb-[20px] pr-[20px] lg:text-[38px]
+                className="text-[#fff] font-normal leading-normal text-right font-[AtypDisplay]  xl:text-[40px] uppercase pb-[20px] pr-[20px] lg:text-[38px]
                z-10"
               >
                 Скачать приложение Taura Express
@@ -263,7 +263,7 @@ function OrderExpress() {
             </div>
             <div className="card_bg w-[50%]  xl:w-[60%] flex relative justify-end items-end">
               <h2
-                className="text-[#fff] text-[12px] font-normal leading-normal text-right font-AtypDisplay xl:text-[32px] uppercase lg:text-[38px] tracking-[-0.52px] pb-[20px] pr-[20px]
+                className="text-[#fff] text-[12px] font-normal leading-normal text-right font-[AtypDisplay]  xl:text-[32px] uppercase lg:text-[38px] tracking-[-0.52px] pb-[20px] pr-[20px]
                z-10 "
               >
                 Зарегистрироваться в приложении и получить клиентский код
@@ -387,7 +387,7 @@ function OrderExpress() {
             </svg>
             <div className="flex relative justify-start flex-col items-start">
               <h2
-                className="text-[#fff] font-normal leading-normal text-left font-AtypDisplay xl:text-[40px] uppercase lg:text-[38px] pt-[20px] pl-[20px]
+                className="text-[#fff] font-normal leading-normal text-left font-[AtypDisplay]  xl:text-[40px] uppercase lg:text-[38px] pt-[20px] pl-[20px]
                z-10"
               >
                 Заполнить адрес китайского склада
@@ -518,7 +518,7 @@ function OrderExpress() {
             </svg>
             <div className="flex  relative justify-end flex-col items-start">
               <h2
-                className="text-[#fff] font-normal leading-normal text-left font-AtypDisplay xl:text-[40px] uppercase lg:text-[38px] pb-[20px] pl-[20px]
+                className="text-[#fff] font-normal leading-normal text-left font-[AtypDisplay]  xl:text-[40px] uppercase lg:text-[38px] pb-[20px] pl-[20px]
                z-10"
               >
                 Заказать любой товар
@@ -536,10 +536,10 @@ function OrderExpress() {
         </div>
         <div className="mt-[40px] lg:mt-[70px]">
           <div className="xl:flex justify-between ">
-            <h2 className="text-[24px] xl:w-[80%] text-[#1C1C1C] font-AtypDisplay font-normal leading-normal lg:text-[50px] xl:text-[66px]">
+            <h2 className="text-[24px] xl:w-[80%] text-[#1C1C1C] font-[AtypDisplay]  font-normal leading-normal lg:text-[50px] xl:text-[66px]">
               ГДЕ И ЧТО МОЖНО КУПИТЬ
             </h2>
-            <p className="text-[12px] lg:text-[18px] text-[#1C1C1C] font-AtypDisplay  font-normal leading-normal mt-[6px] lg:mt-[10px] xl:text-[24px]">
+            <p className="text-[12px] lg:text-[18px] text-[#1C1C1C] font-[AtypDisplay]   font-normal leading-normal mt-[6px] lg:mt-[10px] xl:text-[24px]">
               Специально для вас мы сгруппировали самые популярные магазины США
               в 16 категорий. В данном списке мы собрали 212 лучших он-лайн
               магазинов США:

@@ -25,7 +25,7 @@ function Accordion({ item }) {
           className="flex justify-between items-center gap-2 py-[10px] px-[20px] rounded-[20px] lg:p-[30px] lg:shadow-md"
           onClick={() => toggleAccordion(item.id)}
         >
-          <p className="text-[#161616] font-AtypDisplay text-[14px] leading-6 lg:text-[16px] xl:text-[20px]">
+          <p className="text-[#161616] font-[AtypDisplay]  text-[14px] leading-6 lg:text-[16px] xl:text-[20px]">
             Orci a vitae ut fringilla lacus. At vel dapibus orci elementum ac
             at?
           </p>
@@ -38,7 +38,7 @@ function Accordion({ item }) {
           </p>
         </div>
         <Collapse isOpened={openItemId === item.id}>
-          <p className="text-[#161616] rounded-b-[20px] bg-white pt-[10px] pb-[16px] px-[16px] shadow-md  text-justify font-AtypDisplay text-[12px] font-normal mr-[10px] ml-[10px] lg:p-[30px] lg:ml-[45px] lg:mr-[45px] lg:text-[16px] xl:text-[18px] ">
+          <p className="text-[#161616] rounded-b-[20px] bg-white pt-[10px] pb-[16px] px-[16px] shadow-md  text-justify font-[AtypDisplay]  text-[12px] font-normal mr-[10px] ml-[10px] lg:p-[30px] lg:ml-[45px] lg:mr-[45px] lg:text-[16px] xl:text-[18px] ">
             Congue nullam molestie sit consectetur commodo mi elit viverra in.
             Turpis porttitor eget in quis aliquam. Senectus non nisi odio
             curabitur nisl viverra odio. Sit nunc purus tortor sapien. Maecenas

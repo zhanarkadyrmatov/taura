@@ -7,10 +7,10 @@ function FormComponent() {
       <div className="container">
         <div className="lg:flex lg:items-center xl:gap-[58px] gap-[10px]">
           <div>
-            <h2 className="text-white text-center font-AtypDisplay text-[24px] font-normal leading-normal xl:text-[80px] lg:text-[60px]">
+            <h2 className="text-white text-center font-[AtypDisplay]  text-[24px] font-normal leading-normal xl:text-[80px] lg:text-[60px]">
               Остались вопросы?
             </h2>
-            <p className="text-white xl:text-[28px] text-center font-AtypDisplay text-[12px] font-normal leading-normal mb-[20px] mt-[10px] xl:mt-[40px] lg:text-[18px]">
+            <p className="text-white xl:text-[28px] text-center font-[AtypDisplay]  text-[12px] font-normal leading-normal mb-[20px] mt-[10px] xl:mt-[40px] lg:text-[18px]">
               Напишите нашим специалистам и получите бесплатную консультацию
             </p>
           </div>

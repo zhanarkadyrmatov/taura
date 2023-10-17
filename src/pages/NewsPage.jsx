@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import HeaderComponent from "../Component/HeaderComponent";
 import FooterComponent from "../Component/FooterComponent";
 import Compony from "../assets/compony.png";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 import { Button, IconButton } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
@@ -47,7 +48,8 @@ export function DefaultPagination({
 
   const getItemProps = (index) => ({
     variant: active === index ? "filled" : "text",
-    color: "gray",
+    color: active === index ? "gray" : "#000",
+
     onClick: () => {
       setActive(index);
       paginate(index);
@@ -72,13 +74,13 @@ export function DefaultPagination({
         onClick={prev}
         disabled={active === 1}
       >
-        <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" /> Previous
+        <GrFormPrevious strokeWidth={2} className="h-6 w-6" />
       </Button>
       <div className="flex items-center gap-2">
         {Array.from({ length: Math.ceil(totalNews / newsPerPage) }).map(
           (_, index) => (
-            <IconButton key={index} {...getItemProps(index + 1)}>
-              {index + 1}
+            <IconButton className="" key={index} {...getItemProps(index + 1)}>
+              <span className="">{index + 1}</span>
             </IconButton>
           )
         )}
@@ -89,7 +91,7 @@ export function DefaultPagination({
         onClick={next}
         disabled={active === Math.ceil(totalNews / newsPerPage)}
       >
-        Next <ArrowRightIcon strokeWidth={2} className="h-4 w-4" />
+        <GrFormNext strokeWidth={2} className="h-6 w-6" />
       </Button>
     </div>
   );
@@ -98,31 +100,23 @@ export function DefaultPagination({
 function NewsPage() {
   const [news, setNews] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const newsPerPage = 2; // Number of news articles to display per page
-
-  // Fetch the news data from your API or JSON file
+  const newsPerPage = 2;
   useEffect(() => {
-    // Simulate fetching data from newsData.json
     setNews(newsData);
   }, []);
-
-  // Calculate the index of the last news article on the current page
   const indexOfLastNews = currentPage * newsPerPage;
-  // Calculate the index of the first news article on the current page
   const indexOfFirstNews = indexOfLastNews - newsPerPage;
-  // Get the news articles for the current page
   const currentNews = news.slice(indexOfFirstNews, indexOfLastNews);
-  // Function to handle page change
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <>
       <HeaderComponent />
       <div className="price xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
         <div className="container">
-          <h2 className="text-[#FFF] font-AtypDisplay text-[46px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
+          <h2 className="text-[#FFF] font-[AtypDisplay]  text-[46px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
             Новости
           </h2>
-          <p className="text-[#FFF] font-AtypDisplay text-[15px] lg:text-[26px] xl:text-[36px] font-normal leading-normal">
+          <p className="text-[#FFF] font-[AtypDisplay]  text-[15px] lg:text-[26px] xl:text-[36px] font-normal leading-normal">
             Что у нас происходит
           </p>
         </div>
@@ -133,10 +127,10 @@ function NewsPage() {
             {currentNews.map((e) => {
               return (
                 <div className="border-t-[1px] border-black pt-[15px] xl:pt-[30px] ">
-                  <h2 className="font-AtypDisplay text-[16px] font-normal leading-[185%] text-[#161616] lg:text-[20px] xl:text-[30px]">
+                  <h2 className="font-[AtypDisplay]  text-[16px] font-normal leading-[185%] text-[#161616] lg:text-[20px] xl:text-[30px]">
                     Lorem Ipsum is simply dummy text of the printing
                   </h2>
-                  <p className="font-AtypDisplay text-[12px] font-normal leading-[185%] text-[#161616] opacity-70 lg:text-[14px] xl:text-[20px]">
+                  <p className="font-[AtypDisplay]  text-[12px] font-normal leading-[185%] text-[#161616] opacity-70 lg:text-[14px] xl:text-[20px]">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard Lorem Ipsum is simply dummy text of the printing
@@ -147,7 +141,7 @@ function NewsPage() {
                     printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard...
                   </p>
-                  <p className="flex justify-between items-center font-AtypDisplay text-[15px] font-normal text-[#161616] mt-[10px] mb-[20px] xl:mb-[30px] xl:mt-[16px] lg:text-[15px] xl:text-[20px] ">
+                  <p className="flex justify-between items-center font-[AtypDisplay]  text-[15px] font-normal text-[#161616] mt-[10px] mb-[20px] xl:mb-[30px] xl:mt-[16px] lg:text-[15px] xl:text-[20px] ">
                     <span className="flex items-center gap-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -180,12 +174,14 @@ function NewsPage() {
               );
             })}
           </div>
-          <DefaultPagination
-            currentPage={currentPage}
-            newsPerPage={newsPerPage}
-            totalNews={news.length}
-            paginate={paginate}
-          />
+          <div className="flex justify-center items-center mt-[20px]  xl:mt-[40px]">
+            <DefaultPagination
+              currentPage={currentPage}
+              newsPerPage={newsPerPage}
+              totalNews={news.length}
+              paginate={paginate}
+            />
+          </div>
         </div>
       </main>
       <FooterComponent />

@@ -2,39 +2,23 @@ import React, { Fragment, useState } from "react";
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Button } from "@material-tailwind/react";
 import { Modal } from "../utils/Modal";
-import {
-  ArrowPathIcon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-
+import { BsChevronDown } from "react-icons/bs";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Logo from "../assets/express.png";
 import Language from "../assets/language.png";
 import { RiMenu3Fill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
-
 const products = [
   {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
+    name: "Как это работает?",
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
+    name: "ГДЕ И ЧТО МОЖНА КУПИТЬ",
   },
+
   {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
+    name: "ЦЕНА И ОПЛАТА",
   },
 ];
 
@@ -44,6 +28,7 @@ function classNames(...classes) {
 
 export default function HeaderComponent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [togleOpen, setTogleOpen] = useState(false);
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!open);
@@ -51,11 +36,12 @@ export default function HeaderComponent() {
     handleOpen();
     setMobileMenuOpen(false);
   };
+
   return (
     <header className="bg-[#1C1C1C]">
       <div className="container">
         <nav
-          className="flex items-center justify-between py-[16px] lg:py-[22px] xl:py-[27px]"
+          className="flex  items-center justify-between py-[16px] lg:py-[22px]"
           aria-label="Global"
         >
           <div className="">
@@ -72,74 +58,64 @@ export default function HeaderComponent() {
               <RiMenu3Fill className="h-[30px] w-[30px]" aria-hidden="true" />
             </button>
           </div>
-          <Popover.Group className="hidden xl:flex xl:gap-[25px]">
-            <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-[20px] font-medium font-[Ubuntu]  text-white">
-                Главная
-                <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-gray-400"
-                  aria-hidden="true"
-                />
-              </Popover.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
+          <Popover.Group className="hidden xl:flex items-center xl:gap-[20px]">
+            <div className=" relative">
+              <button
+                onClick={() => setTogleOpen(!togleOpen)}
+                className="text-[20px] font-medium font-[Ubuntu]  text-[#1355A3] flex items-center gap-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-auto   overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                  <div className="p-4">
-                    {products.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                      >
-                        <div className="flex-auto">
-                          <a
-                            href={item.href}
-                            className="block text-[20px] font-medium font-[Ubuntu]  text-black"
-                          >
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </a>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
+                Главная <BsChevronDown className="w-4 h-4" />
+              </button>
+              {togleOpen ? (
+                <div className="absolute z-10 bg-white left-[-470px] top-[73px] flex justify-center items-center w-screen py-[30px] gap-[120px]">
+                  <a
+                    className="text-[25px] uppercase font-medium font-[Ubuntu]  text-black"
+                    href="#"
+                  >
+                    Как это работает?
+                  </a>
+                  <a
+                    className="text-[25px] uppercase font-medium font-[Ubuntu]  text-black"
+                    href="#"
+                  >
+                    Где и что можна купить
+                  </a>
+                  <NavLink
+                    className="text-[25px] uppercase font-medium font-[Ubuntu]  text-black"
+                    to={"/price"}
+                  >
+                    цена и оплата
+                  </NavLink>
+                </div>
+              ) : null}
+            </div>
             <NavLink
               to="/services"
-              className="text-[20px] font-medium font-[Ubuntu]  text-white"
+              className="text-[20px] font-medium font-[Ubuntu]  text-white "
             >
               Услуги
             </NavLink>
             <NavLink
               to={"/company"}
-              className="text-[20px] font-medium font-[Ubuntu]  text-white"
+              className="text-[20px] font-medium font-[Ubuntu]  text-white "
             >
               О нас
             </NavLink>
             <NavLink
               to={"/news"}
-              className="text-[20px] font-medium font-[Ubuntu]  text-white"
+              className="text-[20px] font-medium font-[Ubuntu]  text-white "
             >
               Новости
             </NavLink>
             <NavLink
               to={"/contact"}
-              className="text-[20px] font-medium font-[Ubuntu]  text-white"
+              className="text-[20px] font-medium font-[Ubuntu]  text-white "
             >
               Контакты
             </NavLink>
             <NavLink
               to={"/question"}
-              className="text-[20px] font-medium font-[Ubuntu]  text-white"
+              className="text-[20px] font-medium font-[Ubuntu]  text-white "
             >
               Вопросы
             </NavLink>
@@ -147,10 +123,11 @@ export default function HeaderComponent() {
           <div className="hidden xl:flex xl:justify-center xl:items-center xl:gap-[20px]">
             <NavLink
               to={"/tauraexpress"}
-              className="text-[22px] font-medium  text-[#067DF6]"
+              className="text-[20px] font-medium  text-[#1355A3]"
             >
               Taura Express
             </NavLink>
+
             <Popover className="relative bg-[#F0F0F0] py-[10px] px-[20px] rounded-[30px]">
               <Popover.Button className="flex items-center gap-x-1 text-[20px] font-medium font-[Ubuntu] text-black">
                 <img src={Language} alt="" />
@@ -170,12 +147,12 @@ export default function HeaderComponent() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3  overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                <Popover.Panel className="absolute z-20 left-0 top-full  mt-0  overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                   <div className="p-4">
-                    {["Русский", "Aнглийский"].map((item, index) => (
+                    {["Русский", "English"].map((item, index) => (
                       <div
                         key={index}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                        className="group relative flex items-center  rounded-lg p-2 text-sm leading-6 hover:bg-gray-50"
                       >
                         <div className="flex-auto">
                           <a
@@ -194,8 +171,7 @@ export default function HeaderComponent() {
               </Transition>
             </Popover>
             <Button
-              className="text-[#fff] font-ubuntu text-[20px] bg-none  p-0 font-medium"
-              variant="gradient"
+              className="text-[#fff] font-ubuntu text-[20px] font-medium bg-[#1C1C1C]"
               onClick={handleOpen}
             >
               Напишите нам
@@ -235,7 +211,7 @@ export default function HeaderComponent() {
                     Taura Express
                   </NavLink>
                   <Popover className="relative bg-[#F0F0F0] py-[10px] px-[20px] rounded-[30px]">
-                    <Popover.Button className="flex items-center gap-x-1 text-[18px] font-medium font-[Ubuntu] text-black">
+                    <Popover.Button className="flex items-center gap-x-1 text-[20px] font-medium font-[Ubuntu] text-black">
                       <img src={Language} alt="" />
                       Русский
                       <ChevronDownIcon
@@ -253,17 +229,17 @@ export default function HeaderComponent() {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute -left-8 top-full z-10 mt-3  overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                      <Popover.Panel className="absolute left-0 z-10 top-full  mt-0  overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                         <div className="p-4">
-                          {["Русский", "Aнглийский"].map((item, index) => (
+                          {["Русский", "English"].map((item, index) => (
                             <div
                               key={index}
-                              className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                              className="group relative flex items-center  rounded-lg p-2 text-sm leading-6 hover:bg-gray-50"
                             >
                               <div className="flex-auto">
                                 <a
                                   href={"#"}
-                                  className="text-[18px] font-medium font-[Ubuntu]  text-black flex items-center gap-2"
+                                  className="text-[20px] font-medium font-[Ubuntu]  text-black flex items-center gap-2"
                                 >
                                   <img src={Language} alt="" />
                                   {item}
@@ -311,13 +287,13 @@ export default function HeaderComponent() {
                                   className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                                 >
                                   <div className="flex-auto">
-                                    <a
-                                      href={item.href}
-                                      className="block text-[20px] font-medium font-[Ubuntu]  text-black"
+                                    <NavLink
+                                      to={""}
+                                      className="block text-[20px] font-medium font-[Ubuntu]  uppercase text-black"
                                     >
                                       {item.name}
                                       <span className="absolute inset-0" />
-                                    </a>
+                                    </NavLink>
                                   </div>
                                 </div>
                               ))}
@@ -350,14 +326,6 @@ export default function HeaderComponent() {
                     >
                       <NavLink to={"/news"}>Новости</NavLink>
                     </li>
-                    {/* <li
-                      style={{
-                        boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.15)",
-                      }}
-                      className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
-                    >
-                      <Link>Новости</NavLink>
-                    </li> */}
                     <li
                       style={{
                         boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.15)",
@@ -392,7 +360,7 @@ export default function HeaderComponent() {
             </div>
           </Dialog.Panel>
         </Dialog>
-        <Modal handleOpen={handleOpen} open={open} />
+        <Modal handleOpen={handleOpen} setOpen={setOpen} open={open} />
       </div>
     </header>
   );

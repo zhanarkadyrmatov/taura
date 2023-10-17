@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Avatar } from "@material-tailwind/react";
 import "swiper/css";
 import "swiper/css/effect-creative";
-import { EffectCreative } from "swiper/modules";
+import { EffectCreative, Pagination } from "swiper/modules";
 
 function HeroExpress() {
   return (
@@ -14,17 +14,17 @@ function HeroExpress() {
       <div className="container">
         <div className="xl:grid xl:grid-cols-2 xl:gap-[100px] items-center">
           <div>
-            <h1 className="2xl:text-[96px] lg:text-[90px] text-[40px] text-white font-Atyp-Display font-normal">
+            <h1 className="2xl:text-[96px] lg:text-[90px] text-[40px] text-white font-[AtypDisplay]  font-normal">
               Dui sapien aliquet aliquam
             </h1>
-            <p className="leading-185 xl:text-[24px] lg:text-[20px] text-[14px] font-Atyp-Display text-white mt-[16px] mb-[30px]">
+            <p className="leading-185 xl:text-[24px] lg:text-[20px] text-[14px] font-[AtypDisplay]  text-white mt-[16px] mb-[30px]">
               Quis fringilla convallis et vitae volutpat at porttitor. Est
               tincidunt massa aliquam sed enim rhoncus. Id nullam sollicitudin
               aliquet in.
             </p>
             <div className="lg:flex lg:gap-[104px]">
               <div className="xl:hidden flex flex-col xl:items-center gap-[30px] xl:gap-[114px]">
-                <div className="text-[#fff] font-AtypDisplay">
+                <div className="text-[#fff] font-[AtypDisplay] ">
                   <h2 className="text-[34px] lg:text-[54px] font-normal leading-normal">
                     2000+
                   </h2>
@@ -62,7 +62,7 @@ function HeroExpress() {
                       variant="circular"
                       className="relative flex w-[60px] h-[60px] lg:w-[90px] lg:h-[90px]  rounded-[100px] bg-[#D9D9D9] justify-center items-center"
                     >
-                      <span className="text-[20px] lg:text-[36px] font-Atyp Display font-normal leading-normal">
+                      <span className="text-[20px] lg:text-[36px] font-[AtypDisplay]  font-normal leading-normal">
                         212+
                       </span>
                     </div>
@@ -169,7 +169,7 @@ function HeroExpress() {
               </div>
             </div>
             <div className="hidden xl:flex items-center gap-[114px]">
-              <div className="flex-1 text-[#fff] font-AtypDisplay">
+              <div className="flex-1 text-[#fff] font-[AtypDisplay] ">
                 <h2 className="text-[54px] font-normal leading-normal">
                   2000+
                 </h2>
@@ -207,7 +207,7 @@ function HeroExpress() {
                     variant="circular"
                     className="relative flex w-[100px] h-[100px] rounded-[100px] bg-[#D9D9D9] justify-center items-center"
                   >
-                    <span className="text-[36px] font-Atyp Display font-normal leading-normal">
+                    <span className="text-[36px] font-[AtypDisplay]  font-normal leading-normal">
                       212+
                     </span>
                   </div>
@@ -218,6 +218,7 @@ function HeroExpress() {
           <div className=" hidden xl:block w-full">
             <Swiper
               grabCursor={true}
+              pagination={true}
               effect={"creative"}
               creativeEffect={{
                 prev: {
@@ -229,7 +230,7 @@ function HeroExpress() {
                   translate: ["120%", 0, -400],
                 },
               }}
-              modules={[EffectCreative]}
+              modules={[EffectCreative, Pagination]}
               className="mySwiper"
             >
               <SwiperSlide>

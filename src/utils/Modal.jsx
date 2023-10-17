@@ -6,11 +6,12 @@ import { Button } from "@material-tailwind/react";
 
 export function Modal({ handleOpen, open }) {
   return (
-    <div className="  ">
+    <div className="">
       <Dialog
         className={
-          "fixed w-full h-full z-20 bg-opacity-90 xl:bg-opacity-50 bg-black top-[0] left-[0] flex  flex-col justify-center items-center"
+          "fixed w-full h-full z-[1] bg-opacity-90 xl:bg-opacity-50 bg-black top-[0] left-[0] flex  flex-col justify-center items-center"
         }
+        onClick={handleOpen}
         open={open}
         onClose={handleOpen}
         handler={handleOpen}
@@ -19,7 +20,7 @@ export function Modal({ handleOpen, open }) {
           unmount: { scale: 0.9, y: -100 },
         }}
       >
-        <DialogBody>
+        <DialogBody className="">
           <Form
             style={{
               boxShadow: "0px 0px 10px 0px #fff",

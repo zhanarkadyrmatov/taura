@@ -11,10 +11,10 @@ function ContactPage() {
       <HeaderComponent />
       <div className="price xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
         <div className="container">
-          <h2 className="text-[#FFF] font-AtypDisplay text-[46px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
+          <h2 className="text-[#FFF] font-[AtypDisplay]  text-[46px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
             Контакты
           </h2>
-          <p className="text-[#FFF] font-AtypDisplay text-[15px] lg:text-[26px] xl:text-[36px] font-normal leading-normal">
+          <p className="text-[#FFF] font-[AtypDisplay]  text-[15px] lg:text-[26px] xl:text-[36px] font-normal leading-normal">
             Мы рады услышать Вас по телефону, а также приветствовать Вас в нашем
             офисе.
           </p>
@@ -51,10 +51,10 @@ function ContactPage() {
                       alt=""
                     />
                     <div className="mt-[20px]">
-                      <h4 className="flex justify-between items-center text-[#1C1C1C] font-AtypDisplay text-[14px] font-normal leading-normal mb-[10px] lg:text-[18px] xl:text-[26px]">
+                      <h4 className="flex justify-between items-center text-[#1C1C1C] font-[AtypDisplay]  text-[14px] font-normal leading-normal mb-[10px] lg:text-[18px] xl:text-[26px]">
                         <span>Адрес:</span> <span>Менеджеры по Китаю:</span>
                       </h4>
-                      <p className="flex justify-between items-start text-[#1C1C1C] font-AtypDisplay text-[12px] font-normal leading-normal lg:text-[14px] xl:text-[22px]">
+                      <p className="flex justify-between items-start text-[#1C1C1C] font-[AtypDisplay]  text-[12px] font-normal leading-normal lg:text-[14px] xl:text-[22px]">
                         <span>ул. Абдумомунова 245 г. Бишкек </span>
                         <span>
                           +996 700 000 000 <br />
@@ -63,10 +63,10 @@ function ContactPage() {
                       </p>
                     </div>
                     <div className="my-[16px] lg:my-[20px]">
-                      <h4 className="flex justify-between items-center text-[#1C1C1C] font-AtypDisplay text-[14px] font-normal leading-normal mb-[10px] lg:text-[18px] xl:text-[26px]">
+                      <h4 className="flex justify-between items-center text-[#1C1C1C] font-[AtypDisplay]  text-[14px] font-normal leading-normal mb-[10px] lg:text-[18px] xl:text-[26px]">
                         <span>Касса:</span> <span>Склад:</span>
                       </h4>
-                      <p className="flex justify-between items-start text-[#1C1C1C] font-AtypDisplay text-[12px] font-normal leading-normal lg:text-[14px] xl:text-[22px]">
+                      <p className="flex justify-between items-start text-[#1C1C1C] font-[AtypDisplay]  text-[12px] font-normal leading-normal lg:text-[14px] xl:text-[22px]">
                         <span>+996 700 000 000</span>
                         <span>+996 700 000 000</span>
                       </p>
@@ -82,13 +82,13 @@ function ContactPage() {
                               }}
                               className="flex flex-col items-center justify-center p-[4px] lg:p-[6px] bg-white rounded-[10px]"
                             >
-                              <h4 className="text-[#1C1C1C] font-AtypDisplay text-[14px] lg:text-[16px] font-normal leading-normal mb-[10px] xl:text-[26px]">
+                              <h4 className="text-[#1C1C1C] font-[AtypDisplay]  text-[14px] lg:text-[16px] font-normal leading-normal mb-[10px] xl:text-[26px]">
                                 {item}
                               </h4>
-                              <p className="text-[#1C1C1C] font-AtypDisplay text-[12px] font-normal leading-normal mt-[4px] mb-[6px] lg:text-[14px] xl:text-[20px]">
+                              <p className="text-[#1C1C1C] font-[AtypDisplay]  text-[12px] font-normal leading-normal mt-[4px] mb-[6px] lg:text-[14px] xl:text-[20px]">
                                 08:00
                               </p>
-                              <p className="text-[#1C1C1C] font-AtypDisplay text-[12px] lg:text-[14px] font-normal leading-normal xl:text-[20px]">
+                              <p className="text-[#1C1C1C] font-[AtypDisplay]  text-[12px] lg:text-[14px] font-normal leading-normal xl:text-[20px]">
                                 16:00
                               </p>
                             </li>
@@ -106,10 +106,10 @@ function ContactPage() {
           <div className="container">
             <div className="w-full border-white border-b-[1px] pb-[30px] xl:pb-[40px] lg:pb-[50px] lg:flex justify-between  items-center xl:items-start gap-[20px] xl:gap-158px">
               <div className="">
-                <h2 className="text-center lg:text-start xl:text-[80px] text-white font-normal leading-normal font-atypdisplay lg:text-[50px] text-[24px]">
+                <h2 className="text-center lg:text-start xl:text-[80px] text-white font-normal leading-normal font-[AtypDisplay]  lg:text-[50px] text-[24px]">
                   Остались вопросы?
                 </h2>
-                <p className="text-center lg:text-start xl:text-[28px] text-white font-atyp-display lg:text-[18px] text-[12px] mb-[30px]">
+                <p className="text-center lg:text-start xl:text-[28px] text-white font-[AtypDisplay]  lg:text-[18px] text-[12px] mb-[30px]">
                   Напишите нашим специалистам и получите бесплатную консультацию
                 </p>
               </div>

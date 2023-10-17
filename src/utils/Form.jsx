@@ -4,12 +4,12 @@ import { Select, Option, Button } from "@material-tailwind/react";
 
 function Form() {
   return (
-    <div className="xl:w-[720px] lg:w-[600px] rounded-lg xl:bg-[#F0F0F0] xl:bg-opacity-1 bg-opacity-30 bg-gray-300 px-[10px] py-[20px] lg:p-[40px] xl:p-[50px] lg:rounded-[30px]">
+    <div className="xl:w-[720px] relative z-20 lg:w-[600px] rounded-lg xl:bg-[#F0F0F0] xl:bg-opacity-1 bg-opacity-30 bg-gray-300 px-[10px] py-[20px] lg:p-[40px] xl:p-[50px] lg:rounded-[30px]">
       <div className="hidden lg:block">
-        <h2 className="text-center xl:text-[60px] xl:text-black   text-white font-atyp-display text-[40px]">
+        <h2 className="text-center xl:text-[60px] xl:text-black   text-white font-[AtypDisplay]  text-[40px]">
           Напишите нам
         </h2>
-        <p className="text-center xl:[20px] xl:text-black text-white font-atyp-display text-[16px] mb-[30px]">
+        <p className="text-center xl:[20px] xl:text-black text-white font-[AtypDisplay]  text-[16px] mb-[30px]">
           Тут Вы можете задать интересующий Вас вопрос
         </p>
       </div>

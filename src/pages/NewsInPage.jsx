@@ -62,10 +62,10 @@ function NewsInPage() {
       <HeaderComponent />
       <div className="price xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
         <div className="container">
-          <h2 className="text-[#FFF] font-AtypDisplay text-[30px] lg:text-[50px] xl:text-[60px] font-normal leading-normal">
+          <h2 className="text-[#FFF] font-[AtypDisplay]  text-[30px] lg:text-[50px] xl:text-[60px] font-normal leading-normal">
             Lorem Ipsum is simply dummy text of the printing
           </h2>
-          <p className="text-[#FFF] font-AtypDisplay text-[15px] lg:text-[24px] xl:text-[36px] font-normal leading-normal">
+          <p className="text-[#FFF] font-[AtypDisplay]  text-[15px] lg:text-[24px] xl:text-[36px] font-normal leading-normal">
             Что у нас происходит
           </p>
           <div className=" hidden lg:block relative">
@@ -166,7 +166,7 @@ function NewsInPage() {
       </div>
       <main>
         <div className="container">
-          <p className="text-[#161616] font-AtypDisplay text-[12px] lg:text-[14px] xl:text-[20px] font-normal leading-[185%] opacity-70">
+          <p className="text-[#161616] font-[AtypDisplay]  text-[12px] lg:text-[14px] xl:text-[20px] font-normal leading-[185%] opacity-70">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard Lorem Ipsum
             is simply dummy text of the printing and typesetting industry. Lorem

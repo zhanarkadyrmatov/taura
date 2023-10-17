@@ -11,7 +11,7 @@ function FooterComponent() {
           <div className="flex flex-col xl:flex-col xl:items-start lg:flex-row lg:justify-between lg:items-center gap-[20px]">
             <div>
               <img className="w-[160px] lg:w-[256px]" src={Logo} alt="" />
-              <p className="text-white font-AtypDisplay text-[12px] lg:text-[16px] font-normal">
+              <p className="text-white font-[AtypDisplay]  text-[12px] lg:text-[16px] font-normal">
                 2023 Taura Trans Logistic All rights Recerved.
               </p>
             </div>
@@ -205,10 +205,16 @@ function FooterComponent() {
                 <h3 className="text-[18px] xl:text-[26px]  lg:text-[22px] font-normal mb-[16px]">
                   Мы на карте
                 </h3>
-                <div className="w-full">
+                <div className="w-full relative  ">
+                  <a
+                    href="#"
+                    className="bg-[#000] w-full h-full opacity-50 absolute top-0 flex justify-center items-center xl:text-[26px] text-[#fff] leading-normal font-normal font-[AtypDisplay]"
+                  >
+                    Посмотреть на 2GIS
+                  </a>
                   <a href="#">
                     <iframe
-                      className="w-full rounded-[15px]"
+                      className="w-full xl:h-[270px] rounded-[15px]"
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.6339980505554!2d74.58391327603604!3d42.859460803404865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec99f10d3e9f1%3A0xd8ae1cafa61a6ea6!2z0KTQuNC70L7RgNC90Y7QvNC-0L3QuNGP!5e0!3m2!1sru!2skg!4v1696498751488!5m2!1sru!2skg"
                       allowfullscreen=""
                       loading="lazy"

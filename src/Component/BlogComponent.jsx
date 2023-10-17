@@ -76,10 +76,10 @@ function BlogComponent() {
                     </span>
                   </div>
                 </div>
-                <h2 className="text-dark font-AtypDisplay text-[18px] xl:text-24px xl:text-[28px] m-[3px] mt-[10px] xl:mb-[17px] uppercase">
+                <h2 className="text-dark font-[AtypDisplay]  text-[18px] xl:text-24px xl:text-[28px] m-[3px] mt-[10px] xl:mb-[17px] uppercase">
                   {e.name}
                 </h2>
-                <p className="text-dark font-AtypDisplay lg:text-[14px] text-[12px] xl:text-[18px] leading-[185%]">
+                <p className="text-dark font-[AtypDisplay]  lg:text-[14px] text-[12px] xl:text-[18px] leading-[185%]">
                   {e.title}
                 </p>
               </SwiperSlide>

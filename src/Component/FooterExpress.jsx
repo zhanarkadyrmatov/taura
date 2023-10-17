@@ -68,7 +68,7 @@ function FooterExpress() {
           <div className="flex flex-col xl:flex-col xl:items-start lg:flex-row lg:justify-between lg:items-center gap-[20px]">
             <div>
               <img className="w-[160px] lg:w-[256px] mb-2" src={Logo} alt="" />
-              <p className="text-white font-AtypDisplay text-[12px] lg:text-[16px] font-normal">
+              <p className="text-white font-[AtypDisplay]  text-[12px] lg:text-[16px] font-normal">
                 &copy; 2023 Taura Trans Logistic All rights Recerved.
               </p>
             </div>

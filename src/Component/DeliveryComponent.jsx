@@ -11,10 +11,10 @@ function DeliveryComponent() {
       <div className="container">
         <div className="mt-[40px] lg:mt-[70px] xl:mt-[140px]">
           <div className="lg:grid grid-cols-2 items-start gap-[52px]">
-            <h2 className="text-black xl:text-[66px] lg:text-[50px] text-[24px] font-Atyp-Display font-normal">
+            <h2 className="text-black xl:text-[66px] lg:text-[50px] text-[24px] font-[AtypDisplay]  font-normal">
               Непревзойденное качество, причины выбрать нас
             </h2>
-            <p className="text-[#161616] lg:opacity-70  font-AtypDisplay text-[12px] font-normal leading-normal lg:mt-[20px] mt-[10px] mb-[20px] lg:mb-[0px] lg:text-[18px] xl:text-[26px] ">
+            <p className="text-[#161616] lg:opacity-70  font-[AtypDisplay]  text-[12px] font-normal leading-normal lg:mt-[20px] mt-[10px] mb-[20px] lg:mb-[0px] lg:text-[18px] xl:text-[26px] ">
               Мы не просто поставщик логистических услуг, мы ваш стратегический
               партнер на пути к успеху. Вот почему наши клиенты доверяют нам:
             </p>
@@ -26,7 +26,7 @@ function DeliveryComponent() {
                 src={Icon1}
                 alt=""
               />
-              <p className="opacity-80 text-[#161616] xl:text-[20px] font-AtypDisplay lg:text-[16px] text-[13px]">
+              <p className="opacity-80 text-[#161616] xl:text-[20px] font-[AtypDisplay]  lg:text-[16px] text-[13px]">
                 <span className="text-[#1355A3] lg:text-[18px] xl:text-[24px] text-[15px]">
                   Своевременная доставка:
                 </span>
@@ -42,7 +42,7 @@ function DeliveryComponent() {
                 src={Icon2}
                 alt=""
               />
-              <p className="opacity-80 text-[#161616] xl:text-[20px] font-AtypDisplay lg:text-[16px] text-[13px]">
+              <p className="opacity-80 text-[#161616] xl:text-[20px] font-[AtypDisplay]  lg:text-[16px] text-[13px]">
                 Круглосуточная поддержка: Мы работаем круглосуточно, чтобы
                 обеспечить успех вашей логистики.
               </p>
@@ -60,7 +60,7 @@ function DeliveryComponent() {
                 src={Icon3}
                 alt=""
               />
-              <p className="opacity-80 text-[#161616] xl:text-[20px] font-AtypDisplay lg:text-[16px] text-[13px]">
+              <p className="opacity-80 text-[#161616] xl:text-[20px] font-[AtypDisplay]  lg:text-[16px] text-[13px]">
                 Отслеживание в реальном времени: Будьте в курсе событий в режиме
                 реального времени при каждом движении.{" "}
               </p>

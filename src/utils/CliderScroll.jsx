@@ -41,7 +41,7 @@ function CliderScroll({ props }) {
                 src={item.img}
                 alt=""
               />
-              <h1 className="flex justify-between items-center gap-2 text-[#161616] font-AtypDisplay xl:text-[26px] xl:my-[30px] my-[6px] text-[18px] lg:text-[24px] lg:mt-[20px] lg:mb-[28px]  font-normal uppercase">
+              <h1 className="flex justify-between items-center gap-2 text-[#161616] font-[AtypDisplay]  xl:text-[26px] xl:my-[30px] my-[6px] text-[18px] lg:text-[24px] lg:mt-[20px] lg:mb-[28px]  font-normal uppercase">
                 <span>{item.title}</span> <span>0{item.id}</span>
               </h1>
               <p className="text-[#161616] text-justify font-Ubuntu text-[12px] font-normal leading-[185%] lg:text-[16px]">

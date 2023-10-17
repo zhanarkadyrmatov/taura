@@ -60,10 +60,10 @@ function ServicesComponent() {
   return (
     <div className="mt-[40px] lg:mt-[70px] xl:mt-[140px]">
       <div className="container">
-        <h2 className="text-[#1C1C1C] xl:text-[66px] lg:text-[50px]   font-AtypDisplay text-[24px] font-normal ">
+        <h2 className="text-[#1C1C1C] xl:text-[66px] lg:text-[50px]   font-[AtypDisplay]  text-[24px] font-normal ">
           Наши услуги
         </h2>
-        <p className="text-[#161616] lg:text-[18px] xl:text-[26px] font-AtypDisplay text-[12px] opacity-70 leading-[180%] font-normal mt-[10px] ">
+        <p className="text-[#161616] lg:text-[18px] xl:text-[26px] font-[AtypDisplay]  text-[12px] opacity-70 leading-[180%] font-normal mt-[10px] ">
           Мы не просто поставщик логистических услуг, мы ваш стратегический
           партнер на пути к успеху. Вот почему наши клиенты доверяют нам:
         </p>

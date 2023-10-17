@@ -8,17 +8,17 @@ function QuestionPage() {
       <HeaderComponent />
       <div className="companypage xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[76px] xl:mb-[120px]">
         <div className="container">
-          <h2 className="text-[#FFF] font-AtypDisplay text-[36px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
+          <h2 className="text-[#FFF] font-[AtypDisplay]  text-[36px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
             Часто задаваемые вопросы
           </h2>
-          <p className="text-[#FFF] font-AtypDisplay text-[15px] lg:text-[24px] xl:text-[36px] font-normal leading-normal">
+          <p className="text-[#FFF] font-[AtypDisplay]  text-[15px] lg:text-[24px] xl:text-[36px] font-normal leading-normal">
             Это короткий список довольно часто возникающих вопросов
           </p>
         </div>
       </div>
       <main className="mb-[40px] lg:mb-[70px] xl:mb-[100px]">
         <div className="container">
-          <h2 className="text-[#161616] text-[26px] font-AtypDisplay font-normal leading-[150%] mb-[20px] lg:mb-[30px]  xl:text-[36px] ">
+          <h2 className="text-[#161616] text-[26px] font-[AtypDisplay]  font-normal leading-[150%] mb-[20px] lg:mb-[30px]  xl:text-[36px] ">
             Все вопросы
           </h2>
           <div className="lg:grid grid-cols-3 justify-start items-start">
@@ -28,7 +28,7 @@ function QuestionPage() {
                   style={{
                     boxShadow: "0px 0px 15px 0px rgba(119, 119, 119, 0.10)",
                   }}
-                  className="text-[#161616] w-full text-[14px] font-AtypDisplay font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
+                  className="text-[#161616] w-full text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
                   Когда осуществляются отправки?
                 </li>
@@ -36,7 +36,7 @@ function QuestionPage() {
                   style={{
                     boxShadow: "0px 0px 15px 0px rgba(119, 119, 119, 0.10)",
                   }}
-                  className="text-[#161616] w-full text-[14px] font-AtypDisplay font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
+                  className="text-[#161616] w-full text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
                   Зачем Вам нужна копия моего паспорта?
                 </li>
@@ -44,7 +44,7 @@ function QuestionPage() {
                   style={{
                     boxShadow: "0px 0px 15px 0px rgba(119, 119, 119, 0.10)",
                   }}
-                  className="text-[#161616] w-full text-[14px] font-AtypDisplay font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
+                  className="text-[#161616] w-full text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
                   Что вы не можете перевозить?
                 </li>
@@ -52,7 +52,7 @@ function QuestionPage() {
                   style={{
                     boxShadow: "0px 0px 15px 0px rgba(119, 119, 119, 0.10)",
                   }}
-                  className="text-[#161616] w-full  text-[14px] font-AtypDisplay font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
+                  className="text-[#161616] w-full  text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
                   Сколько и каких товаров можно ввезти беспошлинно?
                 </li>
@@ -60,7 +60,7 @@ function QuestionPage() {
                   style={{
                     boxShadow: "0px 0px 15px 0px rgba(119, 119, 119, 0.10)",
                   }}
-                  className="text-[#161616] w-full text-[14px] font-AtypDisplay font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
+                  className="text-[#161616] w-full text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
                   Зачем покупать в Китае и где искать нужную мне вещь?
                 </li>
@@ -71,10 +71,10 @@ function QuestionPage() {
                 className="m
               xl:mb-[60px] mb-[20px] lg:mb-[30px]"
               >
-                <h4 className="text-[#161616] text-[16px] font-AtypDisplay font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
+                <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Когда осуществляются отправки?
                 </h4>
-                <p className="text-[#161616] text-[12px] font-AtypDisplay font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
+                <p className="text-[#161616] text-[12px] font-[AtypDisplay]  font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
                   Отправки происходят на регулярной основе один раз в неделю. Из
                   США это вторник, из Германии это понедельник. Соответственно в
                   отправки попадает весь груз, который пришел в понедельник и
@@ -86,10 +86,10 @@ function QuestionPage() {
                 className="m
               xl:mb-[60px] mb-[20px] lg:mb-[30px]"
               >
-                <h4 className="text-[#161616] text-[16px] font-AtypDisplay font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
+                <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Зачем Вам нужна копия моего паспорта?
                 </h4>
-                <p className="text-[#161616] text-[12px] font-AtypDisplay font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
+                <p className="text-[#161616] text-[12px] font-[AtypDisplay]  font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
                   Копия Вашего паспорта нужна для того чтобы мы могли произвести
                   таможенное оформление Вашей посылки за Вас. Это относится
                   только к физическим лицам
@@ -99,10 +99,10 @@ function QuestionPage() {
                 className="m
               xl:mb-[60px] mb-[20px] lg:mb-[30px]"
               >
-                <h4 className="text-[#161616] text-[16px] font-AtypDisplay font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
+                <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Что вы не можете перевозить?
                 </h4>
-                <p className="text-[#161616] text-[12px] font-AtypDisplay font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
+                <p className="text-[#161616] text-[12px] font-[AtypDisplay]  font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
                   Любые товары стоимостью больше 200 евро подлежат обязательному
                   таможенному оформлению без применения упрощенной формы) т.е Вы
                   будете оплачивать НДС, импортную пошлину, работу брокера,
@@ -117,10 +117,10 @@ function QuestionPage() {
                 className="m
               xl:mb-[60px] mb-[20px] lg:mb-[30px]"
               >
-                <h4 className="text-[#161616] text-[16px] font-AtypDisplay font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
+                <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Сколько и каких товаров можно ввезти беспошлинно?{" "}
                 </h4>
-                <p className="text-[#161616] text-[12px] font-AtypDisplay font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
+                <p className="text-[#161616] text-[12px] font-[AtypDisplay]  font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
                   С образованием Таможенного союза ЕврАзЭС физические лица имеют
                   право ввозить без уплаты таможенных пошлин товары,
                   предназначенные для личного потребления. Порядок установлен
@@ -134,7 +134,7 @@ function QuestionPage() {
                   личного пользования, таможенная стоимость которых (в
                   эквиваленте) и вес которых не превышают:
                 </p>
-                <p className="text-[#161616] text-[12px] font-AtypDisplay font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
+                <p className="text-[#161616] text-[12px] font-[AtypDisplay]  font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
                   <ul className="list-disc ml-[15px]">
                     <li>
                       10 000 Евро и 50 кг. при ввозе воздушным транспортом
@@ -156,7 +156,7 @@ function QuestionPage() {
                     </li>
                   </ul>
                 </p>
-                <p className="text-[#161616] text-[12px] font-AtypDisplay font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
+                <p className="text-[#161616] text-[12px] font-[AtypDisplay]  font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
                   Для некоторых видов товаров установлены ограничения и запрет к
                   ввозу на Единую таможенную территорию (Приложение №2).
                   Установлен перечень товаров, которые не относятся к товарам
@@ -169,10 +169,10 @@ function QuestionPage() {
                 </p>
               </div>
               <div className="">
-                <h4 className="text-[#161616] text-[16px] font-AtypDisplay font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
+                <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Зачем покупать в США и где искать нужную мне вещь?{" "}
                 </h4>
-                <p className="text-[#161616] text-[12px] font-AtypDisplay font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
+                <p className="text-[#161616] text-[12px] font-[AtypDisplay]  font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
                   Мы предоставляем неограниченные возможности для покупки
                   товаров и услуг в американских магазинах. Даже не находясь в
                   США территориально, Вы сможете приобрести все, что только

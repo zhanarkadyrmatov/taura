@@ -6,11 +6,11 @@ function Blog2Express() {
       <div className="container">
         <div className="lg:flex lg:justify-between lg:items-center lg:gap-[64px] xl:gap-[60px]">
           <div>
-            <h2 className="font-AtypDisplay leading-normal text-[#1C1C1C] font-normal text-[24px] uppercase lg:text-[50px] xl:text-[66px]">
+            <h2 className="font-[AtypDisplay]  leading-normal text-[#1C1C1C] font-normal text-[24px] uppercase lg:text-[50px] xl:text-[66px]">
               ВЫКУПИМ <span className="text-[#067DF6] ">БЕСПЛАТНО</span> ЛЮБОЙ
               ТОВАР
             </h2>
-            <p className="font-AtypDisplay leading-[185%] text-justify my-[10px] text-[#1C1C1C] font-normal text-[12px] lg:text-[14px] xl:text-[20px] xl:mt-[30px]">
+            <p className="font-[AtypDisplay]  leading-[185%] text-justify my-[10px] text-[#1C1C1C] font-normal text-[12px] lg:text-[14px] xl:text-[20px] xl:mt-[30px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of

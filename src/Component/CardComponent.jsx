@@ -38,10 +38,10 @@ function CardComponent() {
   return (
     <div className="my-[40px] lg:my-[70px] xl:my-[140px]">
       <div className="container">
-        <h2 className="text-[24px] text-[#161616] font-AtypDisplay font-normalleading-normal lg:text-[50px] xl:text-[60px] xl:text-center">
+        <h2 className="text-[24px] text-[#161616] font-[AtypDisplay]  font-normalleading-normal lg:text-[50px] xl:text-[60px] xl:text-center">
           Будьте в курсе наших последних событий
         </h2>
-        <p className="text-[12px] opacity-70 text-[#161616] font-AtypDisplay font-normal leading-normal mt-[10px] lg:leading-[185%] lg:text-[16px] xl:text-[20px] xl:text-center">
+        <p className="text-[12px] opacity-70 text-[#161616] font-[AtypDisplay]  font-normal leading-normal mt-[10px] lg:leading-[185%] lg:text-[16px] xl:text-[20px] xl:text-center">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s Lorem Ipsum is simply dummy text of the printing and
@@ -95,13 +95,13 @@ function CardComponent() {
                     </NavLink>
                   </span>
                 </div>
-                <h2 className="text-dark font-AtypDisplay text-[16px] lg:text-[20px] xl:text-[30px] lg:mt-[30px] mt-[10px]  leading-[185%]">
+                <h2 className="text-dark font-[AtypDisplay]  text-[16px] lg:text-[20px] xl:text-[30px] lg:mt-[30px] mt-[10px]  leading-[185%]">
                   {e.name}
                 </h2>
-                <p className="text-[#161616] font-AtypDisplay lg:text-[16px] text-[12px] xl:text-[20px] leading-[185%] ">
+                <p className="text-[#161616] font-[AtypDisplay]  lg:text-[16px] text-[12px] xl:text-[20px] leading-[185%] ">
                   {e.title}
                 </p>
-                <p className="flex justify-between items-center text-[#161616] font-AtypDisplay lg:text-[18px] xl:text-[20px] text-[14px] mt-[10px] xl:mt-[16px]">
+                <p className="flex justify-between items-center text-[#161616] font-[AtypDisplay]  lg:text-[18px] xl:text-[20px] text-[14px] mt-[10px] xl:mt-[16px]">
                   <span className="flex justify-between items-center gap-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

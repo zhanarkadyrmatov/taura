@@ -49,10 +49,10 @@ function ServicesPage() {
       <main className="mb-[40px] lg:mb-[70px] xl:mb-[100px]">
         <div className="services xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
           <div className="container">
-            <h2 className="text-[#FFF] font-AtypDisplay text-[46px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
+            <h2 className="text-[#FFF] font-[AtypDisplay]  text-[46px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
               Услуги
             </h2>
-            <p className="text-[#FFF] font-AtypDisplay text-[15px] lg:text-[26px] xl:text-[36px] font-normal leading-normal">
+            <p className="text-[#FFF] font-[AtypDisplay]  text-[15px] lg:text-[26px] xl:text-[36px] font-normal leading-normal">
               Что мы можем и что Вы можете ожидать от нас
             </p>
           </div>
@@ -67,7 +67,7 @@ function ServicesPage() {
                     src={item.img}
                     alt=""
                   />
-                  <h1 className="flex justify-between items-center gap-2 text-[#161616] font-AtypDisplay xl:text-[26px] xl:my-[30px] mt-[10px] mb-[16px] text-[18px] lg:text-[18px] lg:mt-[20px] lg:mb-[18px]  font-normal uppercase">
+                  <h1 className="flex justify-between items-center gap-2 text-[#161616] font-[AtypDisplay]  xl:text-[26px] xl:my-[30px] mt-[10px] mb-[16px] text-[18px] lg:text-[18px] lg:mt-[20px] lg:mb-[18px]  font-normal uppercase">
                     <span>{item.title}</span> <span>0{item.id}</span>
                   </h1>
                   <p className="text-[#161616] text-justify font-Ubuntu text-[13px] font-normal leading-[185%] lg:text-[14px]">
@@ -75,7 +75,7 @@ function ServicesPage() {
                   </p>
                   <div className="flex justify-end">
                     <a
-                      className="text-[#1C1C1C] font-AtypDisplay lg:text-[15px]  xl:text-[26px] font-normal leading-[185%] border-b-[1px]  border-black mt-[6px]"
+                      className="text-[#1C1C1C] font-[AtypDisplay]  lg:text-[15px]  xl:text-[26px] font-normal leading-[185%] border-b-[1px]  border-black mt-[6px]"
                       href="#"
                     >
                       Подробнее
