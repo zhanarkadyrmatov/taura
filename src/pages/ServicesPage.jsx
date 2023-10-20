@@ -4,6 +4,7 @@ import FooterComponent from "../Component/FooterComponent";
 import Slide1 from "../assets/slide1.png";
 import Slide2 from "../assets/slide2.png";
 import Slide3 from "../assets/slide3.png";
+import { NavLink } from "react-router-dom";
 const Slide = [
   {
     id: 1,
@@ -74,12 +75,12 @@ function ServicesPage() {
                     {item.text}
                   </p>
                   <div className="flex justify-end">
-                    <a
+                    <NavLink
                       className="text-[#1C1C1C] font-[AtypDisplay]  lg:text-[15px]  xl:text-[26px] font-normal leading-[185%] border-b-[1px]  border-black mt-[6px]"
-                      href="#"
+                      to={`/services/:${item.id}`}
                     >
                       Подробнее
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               );

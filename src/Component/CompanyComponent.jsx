@@ -3,18 +3,8 @@ import Compo from "../assets/company.png";
 import Compo3 from "../assets/company3.png";
 import Compo1 from "../assets/company1.png";
 import Slider from "../utils/Slider";
-import YouTube from "react-youtube";
 
 function CompanyComponent() {
-  const videoId = "YOUR_VIDEO_ID"; // Замените на реальный идентификатор видео
-  const opts = {
-    height: "100%",
-    width: "100%",
-    playerVars: {
-      autoplay: 1, // Автоматическое воспроизведение
-    },
-  };
-
   return (
     <div className="bg-[#F0F0F0] py-[40px] mt-[40px] lg:mt-[70px] lg:py-[70px]  xl:py-[140px] xl:mt-[140px]">
       <div className="container">
@@ -37,9 +27,9 @@ function CompanyComponent() {
                   height="534"
                   src="https://www.youtube.com/embed/hZ0JU8h04jY"
                   title="Алмаз Шаадаев &amp; Гуланда - Махабат деген ушундай / Жаны клип 2023"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </div>

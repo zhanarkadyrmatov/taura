@@ -68,7 +68,7 @@ function ServicesComponent() {
           партнер на пути к успеху. Вот почему наши клиенты доверяют нам:
         </p>
       </div>
-      <div>
+      <div className="container">
         <CliderScroll props={Slide} />
       </div>
     </div>

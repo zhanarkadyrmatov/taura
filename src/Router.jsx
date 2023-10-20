@@ -9,6 +9,7 @@ import QuestionPage from "./pages/QuestionPage";
 import TauraExpressPage from "./pages/TauraExpressPage";
 import PricePage from "./pages/PricePage";
 import NewsInPage from "./pages/NewsInPage";
+import ServicesInPage from "./pages/ServicesInPage";
 
 function Router() {
   return (
@@ -23,6 +24,7 @@ function Router() {
         <Route path="tauraexpress/" element={<TauraExpressPage />} />
         <Route path="price/" element={<PricePage />} />
         <Route path="news/:id" element={<NewsInPage />} />
+        <Route path="services/:id" element={<ServicesInPage />} />
       </Routes>
     </>
   );

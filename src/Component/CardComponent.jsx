@@ -50,7 +50,7 @@ function CardComponent() {
         </p>
       </div>
 
-      <div className="lg:max-w-[1570px] lg:px-[20px] lg:mx-auto">
+      <div className="lg:max-w-[1570px] lg:px-[20px] lg:mx-auto container">
         <Swiper
           slidesPerView={1.5}
           spaceBetween={23}
@@ -78,23 +78,12 @@ function CardComponent() {
             },
           }}
           modules={[Pagination, FreeMode]}
-          className="mySwiper grid grid-cols-3 gap-[20px] xl:gap-[86px] mt-[20px] xl:mt-[50px]"
+          className="mySwiper grid grid-cols-3 gap-[20px] xl:gap-[66px] mt-[20px] xl:mt-[50px]"
         >
           {Items.map((e) => {
             return (
               <SwiperSlide key={e.id} className="w-[100%]">
-                <div className="w-[100%] icon relative">
-                  <img className="w-full rounded-[15px]" src={e.img} alt="" />
-                  <span className="p-1 lg:p-[10px] bg-white rounded-[15px] absolute bottom-0 right-0">
-                    <NavLink className=" cursor-pointer" to={"/news/:id"}>
-                      <img
-                        className="bg-black p-[15px] rounded-[15px] xl:w-[90px] xl:h-[90px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]"
-                        src={icon}
-                        alt=""
-                      />
-                    </NavLink>
-                  </span>
-                </div>
+                <Card props={e.img} />
                 <h2 className="text-dark font-[AtypDisplay]  text-[16px] lg:text-[20px] xl:text-[30px] lg:mt-[30px] mt-[10px]  leading-[185%]">
                   {e.name}
                 </h2>

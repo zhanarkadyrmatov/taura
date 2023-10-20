@@ -52,17 +52,13 @@ function OrderExpress() {
                   y2="140.754"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -90,17 +86,13 @@ function OrderExpress() {
                   y2="179.266"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -128,17 +120,13 @@ function OrderExpress() {
                   y2="147.754"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -188,17 +176,13 @@ function OrderExpress() {
                   y2="140.754"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -223,8 +207,8 @@ function OrderExpress() {
                   y2="92.0614"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D8D5D5" />
-                  <stop offset="1" stop-color="#D9D9D9" stop-opacity="0" />
+                  <stop stopColor="#D8D5D5" />
+                  <stop offset="1" stopColor="#D9D9D9" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -249,8 +233,8 @@ function OrderExpress() {
                   y2="212.859"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#B39ED3" />
-                  <stop offset="1" stop-color="#D9D9D9" stop-opacity="0" />
+                  <stop stopColor="#B39ED3" />
+                  <stop offset="1" stopColor="#D9D9D9" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -295,17 +279,13 @@ function OrderExpress() {
                   y2="140.754"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -333,17 +313,13 @@ function OrderExpress() {
                   y2="179.266"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -371,17 +347,13 @@ function OrderExpress() {
                   y2="147.754"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -426,17 +398,13 @@ function OrderExpress() {
                   y2="140.754"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -464,17 +432,13 @@ function OrderExpress() {
                   y2="179.266"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>
@@ -502,17 +466,13 @@ function OrderExpress() {
                   y2="147.754"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#D3D3D3" />
+                  <stop stopColor="#D3D3D3" />
                   <stop
                     offset="0.120248"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0.519166"
+                    stopColor="#D3D3D3"
+                    stopOpacity="0.519166"
                   />
-                  <stop
-                    offset="0.915916"
-                    stop-color="#D3D3D3"
-                    stop-opacity="0"
-                  />
+                  <stop offset="0.915916" stopColor="#D3D3D3" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>

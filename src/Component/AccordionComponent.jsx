@@ -59,8 +59,8 @@ function AccordionComponent() {
           dummy text
         </p>
         <div className="flex xl:grid grid-cols-2 flex-wrap xl:gap-x-[36px] justify-center">
-          {items.map((item) => {
-            return <Accordion item={item} />;
+          {items.map((item, index) => {
+            return <Accordion key={index} item={item} />;
           })}
         </div>
       </div>

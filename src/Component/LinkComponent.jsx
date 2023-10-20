@@ -29,7 +29,10 @@ function LinkComponent() {
       <ul>
         {Link.map((e) => {
           return (
-            <li className="bg-white p-[8px]  lg:p-[14px] rounded-[10px]  lg:rounded-[20px] cursor-pointer shadow-md mb-[20px]  lg:mb-[30px]">
+            <li
+              key={e.id}
+              className="bg-white p-[8px]  lg:p-[14px] rounded-[10px]  lg:rounded-[20px] cursor-pointer shadow-md mb-[20px]  lg:mb-[30px]"
+            >
               <a className="" href="#">
                 <img
                   className="w-[24px] h-[24px] lg:h-[32px] lg:w-[32px]"

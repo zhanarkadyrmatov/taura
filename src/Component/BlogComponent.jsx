@@ -34,58 +34,60 @@ const Items = [
 
 function BlogComponent() {
   return (
-    <div className="mt-[57px]">
-      <div className="lg:max-w-[1570px] lg:px-[20px] lg:mx-auto">
-        <Swiper
-          slidesPerView={1.5}
-          spaceBetween={23}
-          scrollbar={{
-            el: ".swiper-scrollbar",
-            draggable: true,
-          }}
-          freeMode={true}
-          breakpoints={{
-            425: {
-              slidesPerView: 1.5,
-              spaceBetween: 23,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 23,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 23,
-            },
-            1440: {
-              slidesPerView: 3,
-              spaceBetween: 23,
-            },
-          }}
-          modules={[Pagination, FreeMode]}
-          className="mySwiper grid grid-cols-3 gap-[23px] xl:gap-[32px]"
-        >
-          {Items.map((e) => {
-            return (
-              <SwiperSlide key={e.id} className="w-[100%]">
-                <div className="w-[100%] icon relative">
-                  <img className="rounded-[15px]" src={e.img} alt="" />
-                  <div className="absolute bottom-0 right-0 xl:pl-[20px] xl:py-[25px] rounded-tl-[10px] lg:rounded-tl-[40px]   bg-white">
-                    <span className="text-[30px] lg:text-[40px] xl:text-[50px] font-medium text-ubuntu text-white bg-black xl:px-[22px] xl:py-[19px] px-[9px] py-[6px] rounded-[10px]  lg:rounded-[20px] xl:rounded-[35px] ">
-                      0{e.id}
-                    </span>
+    <div className="container">
+      <div className="mt-[57px] ">
+        <div className="lg:max-w-[1570px] lg:px-[20px] lg:mx-auto">
+          <Swiper
+            slidesPerView={1.5}
+            spaceBetween={23}
+            scrollbar={{
+              el: ".swiper-scrollbar",
+              draggable: true,
+            }}
+            freeMode={true}
+            breakpoints={{
+              425: {
+                slidesPerView: 1.5,
+                spaceBetween: 23,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 23,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 23,
+              },
+              1440: {
+                slidesPerView: 3,
+                spaceBetween: 23,
+              },
+            }}
+            modules={[Pagination, FreeMode]}
+            className="mySwiper grid grid-cols-3 gap-[23px] xl:gap-[32px]"
+          >
+            {Items.map((e) => {
+              return (
+                <SwiperSlide key={e.id} className="w-[100%]">
+                  <div className="w-[100%] relative">
+                    <img className="rounded-[15px]" src={e.img} alt="" />
+                    <div className="absolute bottom-0 right-0 xl:pl-[20px] xl:py-[25px] rounded-tl-[10px] lg:rounded-tl-[40px]   bg-white">
+                      <span className="text-[30px] lg:text-[40px] xl:text-[50px] font-medium text-ubuntu text-white bg-black xl:px-[22px] xl:py-[19px] px-[9px] py-[6px] rounded-[10px]  lg:rounded-[20px] xl:rounded-[35px] ">
+                        0{e.id}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <h2 className="text-dark font-[AtypDisplay]  text-[18px] xl:text-24px xl:text-[28px] m-[3px] mt-[10px] xl:mb-[17px] uppercase">
-                  {e.name}
-                </h2>
-                <p className="text-dark font-[AtypDisplay]  lg:text-[14px] text-[12px] xl:text-[18px] leading-[185%]">
-                  {e.title}
-                </p>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+                  <h2 className="text-dark font-[AtypDisplay]  text-[18px] xl:text-24px xl:text-[28px] m-[3px] mt-[10px] xl:mb-[17px] uppercase">
+                    {e.name}
+                  </h2>
+                  <p className="text-dark font-[AtypDisplay]  lg:text-[14px] text-[12px] xl:text-[18px] leading-[185%]">
+                    {e.title}
+                  </p>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
       </div>
     </div>
   );

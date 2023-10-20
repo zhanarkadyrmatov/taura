@@ -1,11 +1,25 @@
 import React from "react";
+import icon from "../assets/card_icon.png";
+import { NavLink } from "react-router-dom";
 
 function Card() {
   return (
-    <div className="card grid grid-cols-3 ">
-      <div className=" bg-slate-400 col-span-3 rounded-[20px] overflow-hidden"></div>
-      <div className="  col-span-2  overflow-hidden"></div>
-      <div className="bg-white">01</div>
+    <div className="">
+      <div className="relative bg-no-repeat bg-center bg-cover overflow-hidden bg-white w-full lg:h-[220px] h-[150px]">
+        <div className="absolute inset-[5px] rounded-[15px]  bg-[url('https://platinumlist.net/guide/wp-content/uploads/2023/03/8359_img_worlds_of_adventure-big1613913137.jpg-1024x683.webp')]   lg:rounded-[30px] ">
+          <div className="icon  absolute  rounded-tl-[15px] lg:rounded-tl-[20px] w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]  xl:w-[110px] xl:h-[110px] bottom-0 right-0  bg-white">
+            <div className="absolute bottom-0 right-0 lg:bottom-[10px] lg:right-[10px]">
+              <NavLink className="cursor-pointer" to={"/news/:id"}>
+                <img
+                  className="bg-black p-[8px] lg:p-[15px]  rounded-[15px] lg:rounded-[20px] xl:w-[90px] xl:h-[90px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]"
+                  src={icon}
+                  alt=""
+                />
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

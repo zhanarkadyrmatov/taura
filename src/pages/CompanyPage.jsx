@@ -65,14 +65,6 @@ const user = [
 ];
 
 function CompanyPage() {
-  const videoId = "YOUR_VIDEO_ID"; // Замените на реальный идентификатор видео
-  const opts = {
-    height: "100%",
-    width: "100%",
-    playerVars: {
-      autoplay: 1, // Автоматическое воспроизведение
-    },
-  };
   return (
     <>
       <HeaderComponent />
@@ -83,14 +75,14 @@ function CompanyPage() {
               О нас
             </h2>
             <p className="text-[#FFF] font-[AtypDisplay]  text-[15px] lg:text-[26px] xl:text-[36px] font-normal leading-normal">
-              Коротко о нас и немного о будущих перспективах{" "}
+              Коротко о нас и немного о будущих перспективах
             </p>
           </div>
         </div>
         <div className="container">
           <div className="flex justify-center items-center gap-[64px]">
             <div className="xl:w-[100%]">
-              <h2 className="text-[#1C1C1C] font-[AtypDisplay]  xl:text-[70px] xl:leading-[91px] lg:text-[50px] leading-normal text-[30px]">
+              <h2 className="text-[#1C1C1C] font-[AtypDisplay]  xl:text-[60px] xl:leading-[81px] lg:text-[50px] leading-normal text-[30px]">
                 #1 Общенациональное логистическое решение для доставки
               </h2>
               <p className="text-[#161616] text-justify font-[AtypDisplay]  xl:text-[20px] leading-[185%] mt-[10px] text-[12px] lg:text-[14px] lg:font-normal	">
@@ -115,15 +107,17 @@ function CompanyPage() {
           </div>
           <div className="xl:grid xl:grid-cols-2 xl:items-center xl:gap-[64px]">
             <div className="w-full  mt-[20px] lg:mt-[30px]">
-              <div className="aspect-ratio-16/9">
-                <YouTube
-                  style={{
-                    borderRadius: "30px",
-                  }}
+              <div className="aspect-ratio-16/9 rounded-[30px]">
+                <iframe
                   className="w-[100%]  h-[433px] xl:h-[433px] xl:rounded-[30px] rounded-[15px]"
-                  videoId={videoId}
-                  opts={opts}
-                />
+                  width="950"
+                  height="534"
+                  src="https://www.youtube.com/embed/hZ0JU8h04jY"
+                  title="Алмаз Шаадаев &amp; Гуланда - Махабат деген ушундай / Жаны клип 2023"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-1 gap-[20px] lg:gap-[100px] xl:gap-[20px] items-center">
