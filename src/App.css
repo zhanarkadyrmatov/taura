@@ -16,12 +16,9 @@
   padding: 0 20px;
   margin: 0 auto;
 }
-
-#hero {
-  background-image: url("./assets/herobg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#question1 {
+  scroll-margin-top: 20px;
+  scroll-behavior: auto;
 }
 
 .swiper {

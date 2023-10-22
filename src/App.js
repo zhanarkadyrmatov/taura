@@ -10,6 +10,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchPosts());
   }, [dispatch]);
+
   return (
     <div className="App">
       <Router />

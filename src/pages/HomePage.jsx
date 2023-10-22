@@ -23,8 +23,8 @@ function HomePage() {
       <FormComponent />
       <CardComponent />
       <AccordionComponent />
-      <FooterComponent />
       <LinkComponent />
+      <FooterComponent />
     </>
   );
 }

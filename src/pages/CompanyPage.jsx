@@ -164,52 +164,54 @@ function CompanyPage() {
               </p>
             </div>
           </div>
-          <Swiper
-            slidesPerView={1.8}
-            spaceBetween={40}
-            freeMode={true}
-            pagination={false}
-            breakpoints={{
-              425: {
-                slidesPerView: 1.8,
-                spaceBetween: 40,
-              },
-              768: {
-                slidesPerView: 2.5,
-                spaceBetween: 40,
-              },
-              1024: {
-                slidesPerView: 3.5,
-                spaceBetween: 40,
-              },
-              1440: {
-                slidesPerView: 5,
-                spaceBetween: 40,
-                pagination: true,
-              },
-            }}
-            modules={[Pagination, FreeMode]}
-            className="mySwiper items-center xl:mt-[49px] mt-[20px]"
-          >
-            {user.map((item) => {
-              return (
-                <SwiperSlide
-                  className="relative w-[200px] h-[400px] rounded-[30px] lg:h-[600px] xl:w-[350px] xl:h-[700px]  lg:w-[250px]"
-                  key={item.id}
-                >
-                  <img className="w-full h-[100%]" src={item.img} alt="" />
-                  <div className=" absolute bottom-[20px] xl:bottom-[30px] left-0 bg-white py-[6px] px-[10px] lg:px-[20px] lg:py-[10px] rounded-r-[10px] lg:rounded-r-[20px]">
-                    <h2 className="text-[#161616] text-justify font-[AtypDisplay]  text-[15px] xl:text-[26px] lg:text-[20px] mr-10 font-normal">
-                      {item.name}
-                    </h2>
-                    <p className="text-[#161616] text-justify font-[AtypDisplay]  lg:text-[14px] text-[12px] xl:text-[20px] font-normal">
-                      {item.title}
-                    </p>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+          <div className="container">
+            <Swiper
+              slidesPerView={1.8}
+              spaceBetween={40}
+              freeMode={true}
+              pagination={false}
+              breakpoints={{
+                425: {
+                  slidesPerView: 1.8,
+                  spaceBetween: 40,
+                },
+                768: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 40,
+                },
+                1440: {
+                  slidesPerView: 5,
+                  spaceBetween: 40,
+                  pagination: true,
+                },
+              }}
+              modules={[Pagination, FreeMode]}
+              className="mySwiper items-center xl:mt-[49px] mt-[20px]"
+            >
+              {user.map((item) => {
+                return (
+                  <SwiperSlide
+                    className="relative w-[200px] h-[400px] rounded-[30px] lg:h-[600px] xl:w-[350px] xl:h-[700px]  lg:w-[250px]"
+                    key={item.id}
+                  >
+                    <img className="w-full h-[100%]" src={item.img} alt="" />
+                    <div className=" absolute bottom-[20px] xl:bottom-[30px] left-0 bg-white py-[6px] px-[10px] lg:px-[20px] lg:py-[10px] rounded-r-[10px] lg:rounded-r-[20px]">
+                      <h2 className="text-[#161616] text-justify font-[AtypDisplay]  text-[15px] xl:text-[26px] lg:text-[20px] mr-10 font-normal">
+                        {item.name}
+                      </h2>
+                      <p className="text-[#161616] text-justify font-[AtypDisplay]  lg:text-[14px] text-[12px] xl:text-[20px] font-normal">
+                        {item.title}
+                      </p>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
         </div>
       </main>
       <FooterComponent />

@@ -195,7 +195,7 @@ export default function HeaderComponent() {
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <NavLink to={"/"}>
-                  <img className="h-8 w-auto" src={Logo} alt="" />
+                  <img className="w-[133px]" src={Logo} alt="" />
                 </NavLink>
               </a>
               <button

@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderComponent from "../Component/HeaderExpress";
+import HeaderExpress from "../Component/HeaderExpress";
 import HeroExpress from "../Component/HeroExpress";
 import BlogExpress from "../Component/BlogExpress";
 import FooterExpress from "../Component/FooterExpress";
@@ -10,7 +10,7 @@ import OrderExpress from "../Component/OrderExpress";
 function TauraExpressPage() {
   return (
     <div className="">
-      <HeaderComponent />
+      <HeaderExpress />
       <HeroExpress />
       <BlogExpress />
       <OrderExpress />

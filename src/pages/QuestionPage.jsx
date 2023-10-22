@@ -4,7 +4,7 @@ import FooterComponent from "../Component/FooterComponent";
 
 function QuestionPage() {
   return (
-    <div>
+    <>
       <HeaderComponent />
       <div className="companypage xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[76px] xl:mb-[120px]">
         <div className="container">
@@ -30,7 +30,7 @@ function QuestionPage() {
                   }}
                   className="text-[#161616] w-full text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
-                  Когда осуществляются отправки?
+                  <a href="#1">Когда осуществляются отправки?</a>
                 </li>
                 <li
                   style={{
@@ -38,7 +38,7 @@ function QuestionPage() {
                   }}
                   className="text-[#161616] w-full text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
-                  Зачем Вам нужна копия моего паспорта?
+                  <a href="#2">Зачем Вам нужна копия моего паспорта?</a>
                 </li>
                 <li
                   style={{
@@ -46,7 +46,7 @@ function QuestionPage() {
                   }}
                   className="text-[#161616] w-full text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
-                  Что вы не можете перевозить?
+                  <a href="#3">Что вы не можете перевозить?</a>
                 </li>
                 <li
                   style={{
@@ -54,7 +54,9 @@ function QuestionPage() {
                   }}
                   className="text-[#161616] w-full  text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
-                  Сколько и каких товаров можно ввезти беспошлинно?
+                  <a href="#4">
+                    Сколько и каких товаров можно ввезти беспошлинно?
+                  </a>
                 </li>
                 <li
                   style={{
@@ -62,14 +64,16 @@ function QuestionPage() {
                   }}
                   className="text-[#161616] w-full text-[14px] font-[AtypDisplay]  font-normal leading-normal py-[10px] px-[20px] bg-white rounded-[15px] lg:text-[16px] xl:text-[20px]"
                 >
-                  Зачем покупать в Китае и где искать нужную мне вещь?
+                  <a href="#5">
+                    Зачем покупать в Китае и где искать нужную мне вещь?
+                  </a>
                 </li>
               </ul>
             </div>
             <div className="mt-[40px] lg:mt-0 lg:pl-[30px] col-span-2">
               <div
-                className="m
-              xl:mb-[60px] mb-[20px] lg:mb-[30px]"
+                id="1"
+                className="xl:mb-[60px] mb-[20px] lg:mb-[30px] scroll-effect "
               >
                 <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Когда осуществляются отправки?
@@ -82,10 +86,7 @@ function QuestionPage() {
                   работают!
                 </p>
               </div>
-              <div
-                className="m
-              xl:mb-[60px] mb-[20px] lg:mb-[30px]"
-              >
+              <div id="2" className="xl:mb-[60px] mb-[20px] lg:mb-[30px]">
                 <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Зачем Вам нужна копия моего паспорта?
                 </h4>
@@ -95,10 +96,7 @@ function QuestionPage() {
                   только к физическим лицам
                 </p>
               </div>
-              <div
-                className="m
-              xl:mb-[60px] mb-[20px] lg:mb-[30px]"
-              >
+              <div id="3" className="xl:mb-[60px] mb-[20px] lg:mb-[30px]">
                 <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Что вы не можете перевозить?
                 </h4>
@@ -113,10 +111,7 @@ function QuestionPage() {
                   товаров:
                 </p>
               </div>
-              <div
-                className="m
-              xl:mb-[60px] mb-[20px] lg:mb-[30px]"
-              >
+              <div id="4" className="xl:mb-[60px] mb-[20px] lg:mb-[30px]">
                 <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
                   Сколько и каких товаров можно ввезти беспошлинно?{" "}
                 </h4>
@@ -168,9 +163,9 @@ function QuestionPage() {
                   однородный товар.
                 </p>
               </div>
-              <div className="">
+              <div id="5" className="">
                 <h4 className="text-[#161616] text-[16px] font-[AtypDisplay]  font-normal leading-[150%] mb-[10px] lg:text-[18px] xl:text-[36px]">
-                  Зачем покупать в США и где искать нужную мне вещь?{" "}
+                  Зачем покупать в США и где искать нужную мне вещь?
                 </h4>
                 <p className="text-[#161616] text-[12px] font-[AtypDisplay]  font-normal leading-[150%] lg:text-[14px] xl:text-[20px]">
                   Мы предоставляем неограниченные возможности для покупки
@@ -189,7 +184,7 @@ function QuestionPage() {
         </div>
       </main>
       <FooterComponent />
-    </div>
+    </>
   );
 }
 

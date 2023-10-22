@@ -70,7 +70,9 @@ function CompanyComponent() {
           </div>
         </div>
       </div>
-      <Slider />
+      <div className="container">
+        <Slider />
+      </div>
     </div>
   );
 }

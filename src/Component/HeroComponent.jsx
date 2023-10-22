@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import image from "../assets/herobg.png";
 
+const images = [
+  "https://ik.imagekit.io/ikmedia/backlit.jpg",
+  image,
+  "https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true",
+];
 function HeroComponent() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentImage = images[currentImageIndex];
+
+  const heroStyle = {
+    backgroundImage: `url(${currentImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    transition: "background-image 1s ease-in-out",
+  };
   return (
-    <div id="hero">
+    <div className="" style={heroStyle}>
       <div className="container">
-        <div className="flex items-center lg:gap-[0px] xl:gap-[54px] py-[50px] xl:py-[84px] lg:pt-[112px] lg:pb-[60px] ">
-          <div>
-            <h1 className="xl:text-[90px] lg:text-[80px] text-[40px] text-white font-[AtypDisplay] font-normal">
-              Скорость. Надежность. Профессионализм.
+        <div className="grid grid-cols-3 justify-between items-center lg:gap-[0px] xl:gap-[54px] py-[50px] xl:py-[84px] lg:pt-[112px] lg:pb-[60px]">
+          <div className=" col-span-2">
+            <h1 className="xl:text-[96px] lg:text-[80px] text-[40px] text-white font-[AtypDisplay] font-normal">
+              Dui sapien aliquet aliquam
             </h1>
             <p className=" leading-185 xl:text-[24px] lg:text-[20px] text-[14px] font-[AtypDisplay]  text-white mt-[16px] mb-[30px]">
               ОсОО “Таура Трнас Логистик компани” - ведущая логистическая
@@ -20,7 +44,7 @@ function HeroComponent() {
               GET STARTED
             </a>
           </div>
-          <div className=" hidden lg:block w-[330px] xl:w-[700px] p-[20px] xl:py-[30px] xl:px-[40px] bg-white bg-opacity-70  rounded-[30px] ">
+          <div className=" hidden lg:block flex-auto p-[20px] xl:py-[30px] xl:px-[40px] bg-white bg-opacity-70  rounded-[30px] ">
             <h2 className="text-[22px] xl:text-[34px] font-[AtypDisplay]  text-black leading-185">
               LOREM IPSUM
             </h2>
