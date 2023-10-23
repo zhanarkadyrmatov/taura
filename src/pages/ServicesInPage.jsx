@@ -3,6 +3,24 @@ import { NavLink } from "react-router-dom";
 import HeaderComponent from "../Component/HeaderComponent";
 import FooterComponent from "../Component/FooterComponent";
 
+const Items = [
+  {
+    id: 1,
+    img: "https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg",
+    text: "Для удобства наших клиентов мы осуществляем бесплатную доставку посылок по городу Бишкек. По Вашему заказу мы вручим Ваши отправления лично Вам, либо доверенному лицу (при предъявлении документов, удостоверяющих личность, конечно). Наши курьеры свяжутся с Вами и доставят ваши покупки в любое удобное для Вас место, но не ранее следующего дня после получения груза и в пределах города Бишкек.",
+  },
+  {
+    id: 2,
+    img: "https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg",
+    text: "Для удобства наших клиентов мы осуществляем бесплатную доставку посылок по городу Бишкек. По Вашему заказу мы вручим Ваши отправления лично Вам, либо доверенному лицу (при предъявлении документов, удостоверяющих личность, конечно). Наши курьеры свяжутся с Вами и доставят ваши покупки в любое удобное для Вас место, но не ранее следующего дня после получения груза и в пределах города Бишкек.",
+  },
+  {
+    id: 3,
+    img: "https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg",
+    text: "Для удобства наших клиентов мы осуществляем бесплатную доставку посылок по городу Бишкек. По Вашему заказу мы вручим Ваши отправления лично Вам, либо доверенному лицу (при предъявлении документов, удостоверяющих личность, конечно). Наши курьеры свяжутся с Вами и доставят ваши покупки в любое удобное для Вас место, но не ранее следующего дня после получения груза и в пределах города Бишкек.",
+  },
+];
+
 function ServicesInPage() {
   const [open, setOpen] = useState(false);
 
@@ -15,10 +33,10 @@ function ServicesInPage() {
       <div className="price xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
         <div className="container">
           <h2 className="text-[#FFF] font-[AtypDisplay]  text-[30px] lg:text-[50px] xl:text-[60px] font-normal leading-normal">
-            Lorem Ipsum is simply dummy text of the printing
+            Доставка до двери{" "}
           </h2>
           <p className="text-[#FFF] font-[AtypDisplay]  text-[15px] lg:text-[24px] xl:text-[36px] font-normal leading-normal">
-            Что у нас происходит
+            Что мы можем и что Вы можете ожидать от нас{" "}
           </p>
           <div className=" hidden lg:block relative">
             <div class="w-max z-[1]  absolute left-0 top-[50px] text-left">
@@ -182,35 +200,23 @@ function ServicesInPage() {
       </div>
       <main>
         <div className="container">
-          <p className="text-[#161616] font-[AtypDisplay]  text-[12px] lg:text-[14px] xl:text-[20px] font-normal leading-[185%] opacity-70">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard Lorem Ipsum
-            is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard Lorem Ipsum is simply dummy
-            text of the printing and typesetting industry. Lorem Ipsum has been
-            the industry's standard Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard...Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry. Lorem Ipsum has been the industry's
-            standard Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard... Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard Lorem Ipsum is simply dummy text of the printing
-            and typesetting industry. Lorem Ipsum has been the industry's
-            standard...
-          </p>
+          <div className="xl:mb-[140px] lg:mb-[70px] mb-[40px]">
+            {Items.map((item) => {
+              return (
+                <div className="lg:flex lg:gap-[24px] xl:gap-[70px] items-center xl:mb-[50px] mb-[20px] justify-between lg:even:flex-row-reverse">
+                  <img
+                    className="lg:w-[50%] w-[100%] h-[150px] lg:h-[182px] xl:h-[259px] rounded-[15px] lg:rounded-[30px]"
+                    src={item.img}
+                    alt=""
+                  />
+                  <p className="lg:w-[50%] mt-[10px] lg:mt-0 text-[#161616] font-[AtypDisplay] xl:text-[20px] text-[14px] font-normal leading-[185%]">
+                    {item.text}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        {/* <div className="mb-40px lg:mb-[70px] xl:mb-[140px]">
-          <CliderScroll props={Slide} />
-        </div> */}
       </main>
       <FooterComponent />
     </>

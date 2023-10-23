@@ -28,7 +28,7 @@ function HeroComponent() {
   return (
     <div className="" style={heroStyle}>
       <div className="container">
-        <div className="grid grid-cols-3 justify-between items-center lg:gap-[0px] xl:gap-[54px] py-[50px] xl:py-[84px] lg:pt-[112px] lg:pb-[60px]">
+        <div className="lg:grid grid-cols-3 justify-between items-center lg:gap-[0px] xl:gap-[54px] py-[50px] xl:py-[84px] lg:pt-[112px] lg:pb-[60px]">
           <div className=" col-span-2">
             <h1 className="xl:text-[96px] lg:text-[80px] text-[40px] text-white font-[AtypDisplay] font-normal">
               Dui sapien aliquet aliquam

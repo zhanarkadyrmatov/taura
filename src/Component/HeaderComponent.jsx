@@ -10,7 +10,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Logo from "../assets/Logo.png";
 import Language from "../assets/language.png";
 import { RiMenu3Fill } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 const products = [
   {
     name: "Как это работает?",
@@ -345,7 +345,7 @@ export default function HeaderComponent() {
                       }}
                       className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                     >
-                      <NavLink to={"/question"}>Вопросы</NavLink>
+                      <Link to={"/question"}>Вопросы</Link>
                     </li>
                   </ul>
                 </div>

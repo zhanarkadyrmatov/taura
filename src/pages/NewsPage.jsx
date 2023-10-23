@@ -3,9 +3,9 @@ import HeaderComponent from "../Component/HeaderComponent";
 import FooterComponent from "../Component/FooterComponent";
 import Compony from "../assets/compony.png";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
-
+import icon from "../assets/card_icon.png";
+import { NavLink } from "react-router-dom";
 import { Button, IconButton } from "@material-tailwind/react";
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 const newsData = [
   {
     id: 1,
@@ -126,7 +126,7 @@ function NewsPage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-[40px]">
             {currentNews.map((e) => {
               return (
-                <div className="border-t-[1px] border-black pt-[15px] xl:pt-[30px] ">
+                <div className="border-t-[1px] mb-[40px] border-black pt-[15px] xl:pt-[30px] ">
                   <h2 className="font-[AtypDisplay]  text-[16px] font-normal leading-[185%] text-[#161616] lg:text-[20px] xl:text-[30px]">
                     Lorem Ipsum is simply dummy text of the printing
                   </h2>
@@ -163,12 +163,25 @@ function NewsPage() {
                     </span>
                     <span>03.01.2021</span>
                   </p>
-                  <div>
-                    <img
-                      className="w-full h-[220px] xl:h-[381px]"
-                      src={Compony}
-                      alt=""
-                    />
+                  <div className="">
+                    <div className="relative overflow-hidden bg-white w-full h-[220px] xl:h-[380px]">
+                      <div className="absolute inset-[5px] bg-no-repeat bg-center bg-cover rounded-[15px]  bg-[url('https://platinumlist.net/guide/wp-content/uploads/2023/03/8359_img_worlds_of_adventure-big1613913137.jpg-1024x683.webp')]   lg:rounded-[30px] ">
+                        <div className="icon  absolute  rounded-tl-[15px] lg:rounded-tl-[20px] w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]  xl:w-[110px] xl:h-[110px] bottom-0 right-0  bg-white">
+                          <div className="absolute bottom-0 right-0 lg:bottom-[10px] lg:right-[10px]">
+                            <NavLink
+                              className="cursor-pointer"
+                              to={"/news/:id"}
+                            >
+                              <img
+                                className="bg-black p-[8px] lg:p-[15px]  rounded-[15px] lg:rounded-[20px] xl:w-[90px] xl:h-[90px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]"
+                                src={icon}
+                                alt=""
+                              />
+                            </NavLink>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               );
