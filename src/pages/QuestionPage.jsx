@@ -6,7 +6,7 @@ function QuestionPage() {
   return (
     <>
       <HeaderComponent />
-      <div className="companypage xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[76px] xl:mb-[120px]">
+      <div className="companypage mt-[100px] xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[76px] xl:mb-[120px]">
         <div className="container">
           <h2 className="text-[#FFF] font-[AtypDisplay]  text-[36px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
             Часто задаваемые вопросы

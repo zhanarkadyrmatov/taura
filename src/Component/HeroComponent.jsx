@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import image from "../assets/herobg.png";
+import { NavLink } from "react-router-dom";
 
 const images = [
   "https://ik.imagekit.io/ikmedia/backlit.jpg",
@@ -26,7 +27,7 @@ function HeroComponent() {
     transition: "background-image 1s ease-in-out",
   };
   return (
-    <div className="" style={heroStyle}>
+    <div className=" mt-[50px] xl:mt-[100px]" style={heroStyle}>
       <div className="container">
         <div className="lg:grid grid-cols-3 justify-between items-center lg:gap-[0px] xl:gap-[54px] py-[50px] xl:py-[84px] lg:pt-[112px] lg:pb-[60px]">
           <div className=" col-span-2">
@@ -53,12 +54,12 @@ function HeroComponent() {
               компания предлагает полный спектр услуг по доставке в полный
               спектр услуг по доставке в
             </p>
-            <a
-              className="text-black font-display text-[20px] xl:text-[28px] font-normal leading-[185%] uppercase flex justify-end"
-              href="#"
+            <NavLink
+              className="text-black font-display text-[20px] xl:text-[28px] font-normal leading-[185%] uppercase flex justify-end hover:text-[#1355A3]"
+              to={"/company"}
             >
               Learn more <span aria-hidden="true">&rarr;</span>
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

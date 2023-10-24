@@ -47,7 +47,7 @@ function ServicesPage() {
   return (
     <>
       <HeaderComponent />
-      <main className="mb-[40px] lg:mb-[70px] xl:mb-[100px]">
+      <main className="mb-[40px] mt-[100px]  lg:mb-[70px] xl:mb-[100px]">
         <div className="services xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
           <div className="container">
             <h2 className="text-[#FFF] font-[AtypDisplay]  text-[46px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">

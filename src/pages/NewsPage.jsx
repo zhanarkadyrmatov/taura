@@ -6,6 +6,10 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import icon from "../assets/card_icon.png";
 import { NavLink } from "react-router-dom";
 import { Button, IconButton } from "@material-tailwind/react";
+import { useQuery } from "react-query";
+import { fetchNews } from "../api/news";
+import Loading from "../utils/Loading";
+
 const newsData = [
   {
     id: 1,
@@ -66,6 +70,7 @@ export function DefaultPagination({
     setActive(active - 1);
     paginate(active - 1);
   };
+
   return (
     <div className="flex items-center gap-4">
       <Button
@@ -98,20 +103,38 @@ export function DefaultPagination({
 }
 
 function NewsPage() {
-  const [news, setNews] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const { isLoading, error, data } = useQuery(["news", currentPage], () =>
+    fetchNews({ page: currentPage })
+  );
   const newsPerPage = 2;
-  useEffect(() => {
-    setNews(newsData);
-  }, []);
+
+  useEffect(() => {}, []);
+
+  if (isLoading)
+    return (
+      <center>
+        <Loading />
+      </center>
+    );
+
+  if (error) {
+    console.log(error);
+    return <></>;
+  }
+
+  const news = data?.data ?? [];
+
+  console.log(news);
   const indexOfLastNews = currentPage * newsPerPage;
   const indexOfFirstNews = indexOfLastNews - newsPerPage;
   const currentNews = news.slice(indexOfFirstNews, indexOfLastNews);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <>
       <HeaderComponent />
-      <div className="price xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
+      <div className="price mt-[100px] xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
         <div className="container">
           <h2 className="text-[#FFF] font-[AtypDisplay]  text-[46px] lg:text-[76px] xl:text-[96px] font-normal leading-normal">
             Новости
@@ -124,22 +147,14 @@ function NewsPage() {
       <main className="mb-[40px] lg:mb-[70px] xl:mb-[100px]">
         <div className="container">
           <div className="lg:grid lg:grid-cols-2 lg:gap-[40px]">
-            {currentNews.map((e) => {
+            {news.map((e) => {
               return (
                 <div className="border-t-[1px] mb-[40px] border-black pt-[15px] xl:pt-[30px] ">
                   <h2 className="font-[AtypDisplay]  text-[16px] font-normal leading-[185%] text-[#161616] lg:text-[20px] xl:text-[30px]">
-                    Lorem Ipsum is simply dummy text of the printing
+                    {e.title}
                   </h2>
                   <p className="font-[AtypDisplay]  text-[12px] font-normal leading-[185%] text-[#161616] opacity-70 lg:text-[14px] xl:text-[20px]">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard Lorem Ipsum is simply dummy text of the printing
-                    and typesetting industry. Lorem Ipsum has been the
-                    industry's standard Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard...
+                    {e.description}
                   </p>
                   <p className="flex justify-between items-center font-[AtypDisplay]  text-[15px] font-normal text-[#161616] mt-[10px] mb-[20px] xl:mb-[30px] xl:mt-[16px] lg:text-[15px] xl:text-[20px] ">
                     <span className="flex items-center gap-2">
@@ -159,13 +174,18 @@ function NewsPage() {
                           fill="#161616"
                         />
                       </svg>
-                      457
+                      {e.views}
                     </span>
                     <span>03.01.2021</span>
                   </p>
                   <div className="">
                     <div className="relative overflow-hidden bg-white w-full h-[220px] xl:h-[380px]">
-                      <div className="absolute inset-[5px] bg-no-repeat bg-center bg-cover rounded-[15px]  bg-[url('https://platinumlist.net/guide/wp-content/uploads/2023/03/8359_img_worlds_of_adventure-big1613913137.jpg-1024x683.webp')]   lg:rounded-[30px] ">
+                      <div
+                        style={{
+                          backgroundImage: `url(${e.image})`,
+                        }}
+                        className="absolute inset-[5px] bg-no-repeat bg-center bg-cover rounded-[15px]  lg:rounded-[30px] "
+                      >
                         <div className="icon  absolute  rounded-tl-[15px] lg:rounded-tl-[20px] w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]  xl:w-[110px] xl:h-[110px] bottom-0 right-0  bg-white">
                           <div className="absolute bottom-0 right-0 lg:bottom-[10px] lg:right-[10px]">
                             <NavLink
