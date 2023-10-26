@@ -14,7 +14,7 @@ function HeroExpress() {
       <div className="container">
         <div className="xl:grid xl:grid-cols-2 xl:gap-[100px] items-center">
           <div>
-            <h1 className="2xl:text-[96px] lg:text-[90px] text-[40px] text-white font-[AtypDisplay]  font-normal">
+            <h1 className="xl:text-[96px] lg:text-[90px] text-[40px] text-white font-[AtypDisplay]  font-normal">
               Dui sapien aliquet aliquam
             </h1>
             <p className="leading-185 xl:text-[24px] lg:text-[20px] text-[14px] font-[AtypDisplay]  text-white mt-[16px] mb-[30px]">

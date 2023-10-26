@@ -367,7 +367,7 @@ function OrderExpress() {
             </div>
             <div className=" lg:w-[589px] lg:h-[411.554px] w-[200px] h-[208px]">
               <img
-                className="w-[55%] lg:w-[44%] lg z-10 lg:top-[-55px]  absolute top-[-20px] right-[-50px] xl:w-[57%] xl:top-[-50px] xl:right-[-110px]"
+                className="w-[42%] top-[-30px] lg:w-[32%] z-10 lg:top-[-55px]  absolute right-[0px] xl:w-[42%] xl:top-[-50px] "
                 src={Iphone3}
                 alt=""
               />
@@ -486,8 +486,8 @@ function OrderExpress() {
             </div>
             <div className="lg:w-[589px] lg:h-[411.554px] w-[200px] h-[208px]">
               <img
-                className="w-[80%] lg:w-[70%] xl:w-[90%] xl:top-[-160px]
-                 z-10  absolute lg:top-[-170px] top-[-75px] right-[-50px]"
+                className="w-[65%] lg:w-[55%] xl:w-[75%] xl:top-[-50px]
+                 z-10  absolute lg:top-[-50px] top-[-20px] right-[0px]"
                 src={Iphone4}
                 alt=""
               />
