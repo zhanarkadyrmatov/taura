@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../utils/Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
-
 import Union from "../assets/Union.png";
-import icon from "../assets/card_icon.png";
-import { NavLink } from "react-router-dom";
+import { fetchNews } from "../api/news";
+import { useQuery } from "react-query";
 
 const Items = [
   {
@@ -35,6 +34,18 @@ const Items = [
 ];
 
 function CardComponent() {
+  const { isLoading, isError, data } = useQuery("fetchNews", fetchNews);
+  const newsData = data || [];
+  if (isError) {
+    return <div>Error: {isError.message}</div>;
+  }
+  const formatDate = (dateString) => {
+    const dateObj = new Date(dateString);
+    const year = dateObj.getFullYear();
+    const month = String(dateObj.getMonth() + 1).padStart(2, "0");
+    const day = String(dateObj.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
   return (
     <div className="my-[40px] lg:my-[70px] xl:my-[140px]">
       <div className="container">
@@ -80,15 +91,15 @@ function CardComponent() {
           modules={[Pagination, FreeMode]}
           className="mySwiper grid grid-cols-3 gap-[20px] xl:gap-[66px] mt-[20px] xl:mt-[50px]"
         >
-          {Items.map((e) => {
+          {newsData.map((e) => {
             return (
               <SwiperSlide key={e.id} className="w-[100%]">
-                <Card props={e.img} />
+                <Card props={e.image} />
                 <h2 className="text-dark font-[AtypDisplay]  text-[16px] lg:text-[20px] xl:text-[30px] lg:mt-[30px] mt-[10px]  leading-[185%]">
-                  {e.name}
+                  {e.title}
                 </h2>
                 <p className="text-[#161616] font-[AtypDisplay]  lg:text-[16px] text-[12px] xl:text-[20px] leading-[185%] ">
-                  {e.title}
+                  {e.description}
                 </p>
                 <p className="flex justify-between items-center text-[#161616] font-[AtypDisplay]  lg:text-[18px] xl:text-[20px] text-[14px] mt-[10px] xl:mt-[16px]">
                   <span className="flex justify-between items-center gap-1">
@@ -108,9 +119,9 @@ function CardComponent() {
                         fill="#161616"
                       />
                     </svg>
-                    457
+                    {e.views}
                   </span>
-                  <span>03.01.2021</span>
+                  <span>{formatDate(e.created_at)}</span>
                 </p>
               </SwiperSlide>
             );

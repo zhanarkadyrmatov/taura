@@ -2,7 +2,6 @@ import React from "react";
 import HeaderComponent from "../Component/HeaderComponent";
 import FooterComponent from "../Component/FooterComponent";
 import Compony from "../assets/compony.png";
-import YouTube from "react-youtube";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";

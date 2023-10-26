@@ -6,6 +6,7 @@ import Slide1 from "../assets/slide1.png";
 import Slide2 from "../assets/slide2.png";
 import Slide3 from "../assets/slide3.png";
 import CliderScroll from "../utils/CliderScroll";
+import { useLocation } from "react-router-dom";
 
 const Slide = [
   {
@@ -58,6 +59,10 @@ const Slide = [
   },
 ];
 function NewsInPage() {
+  const location = useLocation();
+  const [currentPath, setCurrentPath] = useState(location.pathname);
+
+  const paths = currentPath.split("/").filter((path) => path);
   return (
     <>
       <HeaderComponent />
@@ -105,7 +110,24 @@ function NewsInPage() {
                       </svg>
                     </NavLink>
                   </li>
-                  <li class="flex gap-2 cursor-pointer items-center font-sans text-sm xl:text-[22px] font-normal leading-normal text-blue-gray-900 antialiased transition-colors duration-300 hover:text-pink-500">
+                  {paths.map((path, index) => (
+                    <li
+                      key={path}
+                      class="flex gap-2 cursor-pointer items-center font-sans text-sm xl:text-[22px] font-normal leading-normal text-blue-gray-900 antialiased transition-colors duration-300 hover:text-pink-500"
+                    >
+                      {index < paths.length - 1 ? (
+                        <NavLink
+                          class="opacity-60 uppercase"
+                          to={`/${paths.slice(0, index + 1).join("/")}`}
+                        >
+                          {path}
+                        </NavLink>
+                      ) : (
+                        <span>{path}</span>
+                      )}
+                    </li>
+                  ))}
+                  {/* <li class="flex gap-2 cursor-pointer items-center font-sans text-sm xl:text-[22px] font-normal leading-normal text-blue-gray-900 antialiased transition-colors duration-300 hover:text-pink-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="21"
@@ -155,19 +177,12 @@ function NewsInPage() {
                       </svg>
                       <NavLink
                         class="font-medium text-[#1C1C1C] transition-colors hover:text-pink-500 uppercase"
-                        to="#"
+                        to="/your-page"
                       >
                         Lorem Ipsum is simply dummy text of the printing
                       </NavLink>
                     </li>
-
-                    {/* <NavLink
-                      class="font-medium text-[#1C1C1C] transition-colors hover:text-pink-500 uppercase"
-                      to="#"
-                    >
-                      Lorem Ipsum is simply dummy text of the printing
-                    </NavLink> */}
-                  </li>
+                  </li> */}
                 </ol>
               </nav>
             </div>

@@ -52,56 +52,56 @@ export default function HeaderComponent() {
           <Popover.Group className="hidden xl:flex items-center xl:gap-[20px]">
             <NavLink
               to="/"
-              className="text-[20px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
+              className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
               Главная
             </NavLink>
             <NavLink
               to="/services"
-              className="text-[20px] hover:text-[#1355A3] font-medium font-[Ubuntu] text-black"
+              className="text-[18px] hover:text-[#1355A3] font-medium font-[Ubuntu] text-black"
             >
               Услуги
             </NavLink>
             <NavLink
               to={"/company"}
-              className="text-[20px] hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
+              className="text-[18px] hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
               О нас
             </NavLink>
             <NavLink
               to={"/news"}
-              className="text-[20px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
+              className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
               Новости
             </NavLink>
             <NavLink
               to={"/contact"}
-              className="text-[20px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
+              className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
               Контакты
             </NavLink>
             <NavLink
               to={"/question"}
-              className="text-[20px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
+              className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
               Вопросы
             </NavLink>
             <NavLink
               to={"/price"}
-              className="text-[20px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
+              className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
               Цена оплата
             </NavLink>
           </Popover.Group>
-          <div className="hidden xl:flex xl:justify-center xl:items-center xl:gap-[20px]">
+          <div className="hidden xl:flex xl:justify-center xl:items-center xl:gap-[15px]">
             <NavLink
               to={"/tauraexpress"}
-              className="text-[20px] font-medium  text-[#1355A3]"
+              className="text-[18px] font-medium  text-[#1355A3]"
             >
               Taura Express
             </NavLink>
-            <Popover className="relative bg-[#F0F0F0] py-[10px] px-[20px] rounded-[30px]">
-              <Popover.Button className="flex items-center gap-x-1 text-[20px] font-medium font-[Ubuntu] text-black">
+            <Popover className="relative bg-[#F0F0F0] py-[10px] px-[15px] rounded-[30px]">
+              <Popover.Button className="flex items-center gap-x-1 text-[18px] font-medium font-[Ubuntu] text-black">
                 <img src={Language} alt="" />
                 RU
                 <ChevronDownIcon
@@ -143,7 +143,7 @@ export default function HeaderComponent() {
               </Transition>
             </Popover>
             <Button
-              className="text-[#fff] font-ubuntu text-[20px] font-medium rounded-[30px] bg-[#1C1C1C] p-[20px]"
+              className="text-[#fff] font-ubuntu text-[18px] font-medium rounded-[30px] bg-[#1C1C1C] p-[15px]"
               variant="gradient"
               onClick={handleOpen}
             >

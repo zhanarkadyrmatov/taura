@@ -1,50 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Accordion from "../utils/Accordion";
-const items = [
-  {
-    id: 1,
-    title:
-      "Orci a vitae ut fringilla lacus. At vel dapibus orci elementum ac at?",
-    content:
-      "Congue nullam molestie sit consectetur commodo mi elit viverra in. Turpis porttitor eget in quis aliquam. Senectus non nisi odio curabitur nisl viverra odio. Sit nunc purus tortor sapien. Maecenas eget tellus massa consectetur. Etiam leo luctus etiam  vel. Vulputate varius elit nibh tortor id interdum interdum tellus.",
-  },
-  {
-    id: 2,
-    title:
-      "Orci a vitae ut fringilla lacus. At vel dapibus orci elementumac at?",
-    content:
-      "Congue nullam molestie sit consectetur commodo mi elit viverra in. Turpis porttitor eget in quis aliquam. Senectus non nisi odio curabitur nisl viverra odio. Sit nunc purus tortor sapien. Maecenas eget tellus massa consectetur. Etiam leo luctus etiam  vel. Vulputate varius elit nibh tortor id interdum interdum tellus.",
-  },
-  {
-    id: 3,
-    title:
-      "Orci a vitae ut fringilla lacus. At vel dapibus orci elementumac at?",
-    content:
-      "Congue nullam molestie sit consectetur commodo mi elit viverra in. Turpis porttitor eget in quis aliquam. Senectus non nisi odio curabitur nisl viverra odio. Sit nunc purus tortor sapien. Maecenas eget tellus massa consectetur. Etiam leo luctus etiam  vel. Vulputate varius elit nibh tortor id interdum interdum tellus.",
-  },
-  {
-    id: 4,
-    title:
-      "Orci a vitae ut fringilla lacus. At vel dapibus orci elementumac at?",
-    content:
-      "Congue nullam molestie sit consectetur commodo mi elit viverra in. Turpis porttitor eget in quis aliquam. Senectus non nisi odio curabitur nisl viverra odio. Sit nunc purus tortor sapien. Maecenas eget tellus massa consectetur. Etiam leo luctus etiam  vel. Vulputate varius elit nibh tortor id interdum interdum tellus.",
-  },
-  {
-    id: 5,
-    title:
-      "Orci a vitae ut fringilla lacus. At vel dapibus orci elementumac at?",
-    content:
-      "Congue nullam molestie sit consectetur commodo mi elit viverra in. Turpis porttitor eget in quis aliquam. Senectus non nisi odio curabitur nisl viverra odio. Sit nunc purus tortor sapien. Maecenas eget tellus massa consectetur. Etiam leo luctus etiam  vel. Vulputate varius elit nibh tortor id interdum interdum tellus.",
-  },
-  {
-    id: 6,
-    title:
-      "Orci a vitae ut fringilla lacus. At vel dapibus orci elementumac at?",
-    content:
-      "Congue nullam molestie sit consectetur commodo mi elit viverra in. Turpis porttitor eget in quis aliquam. Senectus non nisi odio curabitur nisl viverra odio. Sit nunc purus tortor sapien. Maecenas eget tellus massa consectetur. Etiam leo luctus etiam  vel. Vulputate varius elit nibh tortor id interdum interdum tellus.",
-  },
-];
+import { fetchQuestion } from "../api/question";
+import { useQuery } from "react-query";
+import { Paginate } from "../utils/Paginate";
+import Loading from "../utils/Loading";
+
 function AccordionComponent() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const { isLoading, isError, data } = useQuery(["question", currentPage], () =>
+    fetchQuestion({ page: currentPage })
+  );
+  const newsPerPage = 4;
+  if (isError) {
+    return <div>Error: {isError.message}</div>;
+  }
+  const question = data || [];
+  const indexOfLastNews = currentPage * newsPerPage;
+  const indexOfFirstNews = indexOfLastNews - newsPerPage;
+  const currentNews = question.slice(indexOfFirstNews, indexOfLastNews);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div className="mb-[40px] lg:mb-[70px] xl:mb-[100px]">
       <div className="container">
@@ -58,11 +34,26 @@ function AccordionComponent() {
           typesetting industry. Lorem Ipsum has been the industry's standard
           dummy text
         </p>
-        <div className="flex xl:grid grid-cols-2 flex-wrap xl:gap-x-[36px] justify-center">
-          {items.map((item, index) => {
-            return <Accordion key={index} item={item} />;
-          })}
-        </div>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <div className="flex xl:grid grid-cols-2 flex-wrap xl:gap-x-[36px] justify-center">
+              {currentNews.map((item, index) => {
+                return <Accordion key={index} item={item} />;
+              })}
+            </div>
+            <div className="flex justify-center items-center">
+              <Paginate
+                currentPage={currentPage}
+                newsPerPage={newsPerPage}
+                totalNews={question.length}
+                paginate={paginate}
+                isLoading={isLoading}
+              />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

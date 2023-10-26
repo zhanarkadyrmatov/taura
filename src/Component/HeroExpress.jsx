@@ -10,7 +10,7 @@ import { EffectCreative, Pagination } from "swiper/modules";
 
 function HeroExpress() {
   return (
-    <div className="bg-[#1C1C1C] pb-[50px] pt-[40px] lg:pt-[70px] xl:pt-0">
+    <div className="bg-[#1C1C1C] mt-[50px] xl:mt-[100px] pb-[50px] pt-[40px] lg:pt-[70px] xl:pt-[15px]">
       <div className="container">
         <div className="xl:grid xl:grid-cols-2 xl:gap-[100px] items-center">
           <div>
