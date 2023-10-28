@@ -7,13 +7,17 @@ import Logo from "../assets/Logo.png";
 import Language from "../assets/language.png";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import { NavLink, Link } from "react-router-dom";
-import { Listbox } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { useTranslation } from "react-i18next";
+import { FaAngleDown } from "react-icons/fa";
+import i18n from "../i18n";
 
 export default function HeaderComponent() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [open, setOpen] = useState(false);
+  const [languageBtn, setLanguageBtn] = useState(false);
+  const [language, setLanguage] = useState("en");
 
+  const { t } = useTranslation();
   const handleMenuOpen = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -22,6 +26,12 @@ export default function HeaderComponent() {
   const handleMobile = () => {
     handleOpen();
     setMobileMenuOpen(false);
+  };
+
+  const handleLanguageChange = (lng) => {
+    setLanguage(lng);
+    i18n.changeLanguage(lng);
+    setLanguageBtn(false);
   };
 
   return (
@@ -39,7 +49,7 @@ export default function HeaderComponent() {
           <div className="flex xl:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md text-gray-700"
+              className="inline-flex items-center justify-center rounded-md text-black"
               onClick={handleMenuOpen}
             >
               {mobileMenuOpen ? (
@@ -52,45 +62,45 @@ export default function HeaderComponent() {
           <Popover.Group className="hidden xl:flex items-center xl:gap-[20px]">
             <NavLink
               to="/"
-              className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
+              className="text-[18px] active:text-[#1355A3] hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
-              Главная
+              {t("home")}
             </NavLink>
             <NavLink
               to="/services"
-              className="text-[18px] hover:text-[#1355A3] font-medium font-[Ubuntu] text-black"
+              className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu] text-black"
             >
-              Услуги
+              {t("services")}
             </NavLink>
             <NavLink
               to={"/company"}
-              className="text-[18px] hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
+              className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
-              О нас
+              {t("about")}
             </NavLink>
             <NavLink
               to={"/news"}
               className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
-              Новости
+              {t("news")}
             </NavLink>
             <NavLink
               to={"/contact"}
               className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
-              Контакты
+              {t("contacts")}
             </NavLink>
             <NavLink
               to={"/question"}
               className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
-              Вопросы
+              {t("questions")}
             </NavLink>
             <NavLink
               to={"/price"}
               className="text-[18px]  hover:text-[#1355A3] font-medium font-[Ubuntu]  text-black"
             >
-              Цена оплата
+              {t("price")}
             </NavLink>
           </Popover.Group>
           <div className="hidden xl:flex xl:justify-center xl:items-center xl:gap-[15px]">
@@ -100,54 +110,44 @@ export default function HeaderComponent() {
             >
               Taura Express
             </NavLink>
-            <Popover className="relative bg-[#F0F0F0] py-[10px] px-[15px] rounded-[30px]">
-              <Popover.Button className="flex items-center gap-x-1 text-[18px] font-medium font-[Ubuntu] text-black">
-                <img src={Language} alt="" />
-                RU
-                <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-gray-400"
-                  aria-hidden="true"
-                />
-              </Popover.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
+            <div className=" relative">
+              <div
+                className={`bg-[#F0F0F0] py-[10px] px-[15px]  ${
+                  languageBtn ? "rounded-t-[20px]" : "rounded-[30px]"
+                }  `}
               >
-                <Popover.Panel className="absolute left-0 top-full  mt-0  overflow-hidden rounded-b-[20px] bg-white ring-1 ring-gray-900/5">
-                  <div className="p-4">
-                    {["RU", "EN"].map((item, index) => (
-                      <div
-                        key={index}
-                        className="group relative flex items-center  rounded-lg p-2 text-sm leading-6 hover:bg-gray-50"
-                      >
-                        <div className="flex-auto">
-                          <a
-                            href={"#"}
-                            className="text-[20px] font-medium font-[Ubuntu]  text-black flex items-center gap-2"
-                          >
-                            <img src={Language} alt="" />
-                            {item}
-                            <span className="absolute inset-0" />
-                          </a>
-                        </div>
-                      </div>
-                    ))}
+                <button
+                  onClick={() => setLanguageBtn(!languageBtn)}
+                  className={`flex items-center gap-x-1 text-[18px] font-medium font-[Ubuntu] text-black
+                  `}
+                >
+                  <img src={Language} alt="" />
+                  <span className=" uppercase">{language}</span>
+                  <FaAngleDown
+                    className={`${languageBtn ? "rotate-180" : ""} `}
+                  />
+                </button>
+                {languageBtn && (
+                  <div
+                    onClick={() =>
+                      handleLanguageChange(language === "ru" ? "en" : "ru")
+                    }
+                    className="flex cursor-pointer justify-center absolute left-0 right-0  top-[45px] bg-blue-gray-600 w-full p-2 rounded-b-[20px]"
+                  >
+                    <button className="text-[18px] font-medium font-[Ubuntu] text-black uppercase">
+                      <span>{language === "ru" ? "en" : "ru"}</span>
+                    </button>
                   </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
+                )}
+              </div>
+            </div>
+
             <Button
               className="text-[#fff] font-ubuntu text-[18px] font-medium rounded-[30px] bg-[#1C1C1C] p-[15px]"
               variant="gradient"
               onClick={handleOpen}
             >
-              Напишите нам
+              {t("write_to_us")}
             </Button>
           </div>
         </nav>
@@ -163,48 +163,39 @@ export default function HeaderComponent() {
                     >
                       Taura Express
                     </NavLink>
-                    <Popover className="relative bg-[#F0F0F0] py-[10px] px-[20px] rounded-[30px]">
-                      <Popover.Button className="flex items-center gap-x-1 text-[20px] font-medium font-[Ubuntu] text-black">
-                        <img src={Language} alt="" />
-                        Русский
-                        <ChevronDownIcon
-                          className="h-5 w-5 flex-none text-gray-400"
-                          aria-hidden="true"
-                        />
-                      </Popover.Button>
-
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-200"
-                        enterFrom="opacity-0 translate-y-1"
-                        enterTo="opacity-100 translate-y-0"
-                        leave="transition ease-in duration-150"
-                        leaveFrom="opacity-100 translate-y-0"
-                        leaveTo="opacity-0 translate-y-1"
+                    <div className=" relative">
+                      <div
+                        className={`bg-[#F0F0F0] py-[10px] px-[15px]  ${
+                          languageBtn ? "rounded-t-[20px]" : "rounded-[30px]"
+                        }  `}
                       >
-                        <Popover.Panel className="absolute left-0 z-10 top-full  mt-0  overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                          <div className="p-4">
-                            {["Русский", "English"].map((item, index) => (
-                              <div
-                                key={index}
-                                className="group relative flex items-center  rounded-lg p-2 text-sm leading-6 hover:bg-gray-50"
-                              >
-                                <div className="flex-auto">
-                                  <a
-                                    href={"#"}
-                                    className="text-[20px] font-medium font-[Ubuntu]  text-black flex items-center gap-2"
-                                  >
-                                    <img src={Language} alt="" />
-                                    {item}
-                                    <span className="absolute inset-0" />
-                                  </a>
-                                </div>
-                              </div>
-                            ))}
+                        <button
+                          onClick={() => setLanguageBtn(!languageBtn)}
+                          className={`flex items-center gap-x-1 text-[18px] font-medium font-[Ubuntu] text-black
+                  `}
+                        >
+                          <img src={Language} alt="" />
+                          <span className=" uppercase">{language}</span>
+                          <FaAngleDown
+                            className={`${languageBtn ? "rotate-180" : ""} `}
+                          />
+                        </button>
+                        {languageBtn && (
+                          <div
+                            onClick={() =>
+                              handleLanguageChange(
+                                language === "ru" ? "en" : "ru"
+                              )
+                            }
+                            className="flex cursor-pointer justify-center absolute left-0 right-0  top-[45px] bg-blue-gray-600 w-full p-2 rounded-b-[20px]"
+                          >
+                            <button className="text-[18px] font-medium font-[Ubuntu] text-black uppercase">
+                              <span>{language === "ru" ? "en" : "ru"}</span>
+                            </button>
                           </div>
-                        </Popover.Panel>
-                      </Transition>
-                    </Popover>
+                        )}
+                      </div>
+                    </div>
                   </div>
                   <div>
                     <ul className="flex flex-col justify-center items-center gap-[30px]">
@@ -214,7 +205,7 @@ export default function HeaderComponent() {
                         }}
                         className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] flex justify-center items-center shadow p-[10px]"
                       >
-                        <NavLink to="/">Главная</NavLink>
+                        <NavLink to="/">{t("home")}</NavLink>
                       </li>
                       <li
                         style={{
@@ -222,7 +213,7 @@ export default function HeaderComponent() {
                         }}
                         className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center shadow p-[10px]"
                       >
-                        <NavLink to="/services">Услуги</NavLink>
+                        <NavLink to="/services">{t("services")}</NavLink>
                       </li>
                       <li
                         style={{
@@ -230,7 +221,7 @@ export default function HeaderComponent() {
                         }}
                         className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                       >
-                        <NavLink to={"/company"}>О нас</NavLink>
+                        <NavLink to={"/company"}>{t("about")}</NavLink>
                       </li>
                       <li
                         style={{
@@ -238,7 +229,7 @@ export default function HeaderComponent() {
                         }}
                         className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                       >
-                        <NavLink to={"/news"}>Новости</NavLink>
+                        <NavLink to={"/news"}>{t("news")}</NavLink>
                       </li>
                       <li
                         style={{
@@ -246,7 +237,7 @@ export default function HeaderComponent() {
                         }}
                         className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                       >
-                        <NavLink to={"/contact"}>Контакты</NavLink>
+                        <NavLink to={"/contact"}>{t("contacts")}</NavLink>
                       </li>
                       <li
                         style={{
@@ -254,7 +245,7 @@ export default function HeaderComponent() {
                         }}
                         className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                       >
-                        <Link to={"/question"}>Вопросы</Link>
+                        <NavLink to={"/question"}>{t("questions")}</NavLink>
                       </li>
                       <li
                         style={{
@@ -262,7 +253,7 @@ export default function HeaderComponent() {
                         }}
                         className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                       >
-                        <Link to={"#"}>Цена оплата</Link>
+                        <NavLink to={"#"}>{t("price")}</NavLink>
                       </li>
                     </ul>
                   </div>
@@ -275,7 +266,7 @@ export default function HeaderComponent() {
                       variant="gradient"
                       onClick={handleMobile}
                     >
-                      Напишите нам
+                      {t("write_to_us")}
                     </Button>
                   </div>
                 </div>

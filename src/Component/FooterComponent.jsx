@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/footerLogo.png";
 import Logo1 from "../assets/Oracle.png";
 import { MapContainer, TileLayer } from "react-leaflet";
+import { NavLink } from "react-router-dom";
 
 function FooterComponent() {
   return (
@@ -19,7 +20,9 @@ function FooterComponent() {
               <p className="text-white font-AtyrDisplay lg:text-[20px] xl:text-[26px] text-[14px] font-normal">
                 Разработано в компанией:
               </p>
-              <img className="w-[100px] lg:w-[150px]" src={Logo1} alt="" />
+              <NavLink to="/">
+                <img className="w-[100px] lg:w-[150px]" src={Logo1} alt="" />
+              </NavLink>
             </div>
           </div>
           <div className="lg:grid grid-cols-3 lg:mt-[60px] xl:mt-0">
@@ -29,13 +32,19 @@ function FooterComponent() {
               </h3>
               <ul className="text-[16px] xl:text-[22px] lg:text-[18px]">
                 <li className="mb-[10px]">
-                  <a href="#">Главная</a>
+                  <NavLink className="hover:text-[#1355A3]" to="/">
+                    Главная
+                  </NavLink>
                 </li>
                 <li className="mb-[10px]">
-                  <a href="#">О компании</a>
+                  <NavLink className="hover:text-[#1355A3]" to="/company">
+                    О компании
+                  </NavLink>
                 </li>
                 <li className="mb-[10px]">
-                  <a href="#">Услуги</a>
+                  <NavLink className="hover:text-[#1355A3]" to="/services">
+                    Услуги
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -45,7 +54,7 @@ function FooterComponent() {
                   Контакты
                 </h3>
                 <ul className="text-[16px] xl:text-[22px] lg:text-[18px]">
-                  <li className="mb-[10px]">
+                  <li className="mb-[10px] hover:text-[#1355A3]">
                     <a
                       className="flex justify-start items-center gap-2"
                       href="#"
@@ -76,7 +85,10 @@ function FooterComponent() {
                     </a>
                   </li>
                   <li className="mb-[10px]">
-                    <a className="flex items-center gap-2" href="#">
+                    <a
+                      className="flex items-center hover:text-[#1355A3] gap-2"
+                      href="#"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"
@@ -104,7 +116,7 @@ function FooterComponent() {
                 </h3>
                 <ul className="text-[16px]  flex items-center gap-[20px] ">
                   <li className="mb-[10px]">
-                    <a href="#">
+                    <a className="hover:scale-75 hover:fill-[#1355A3]" href="#">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

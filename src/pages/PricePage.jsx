@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeaderComponent from "../Component/HeaderComponent";
 import FooterComponent from "../Component/FooterComponent";
 
 function PricePage() {
+  function ScrollToTopOnMount() {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
+    return null;
+  }
   return (
     <>
+      <ScrollToTopOnMount />
       <HeaderComponent />
       <div className="price mt-[100px] xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
         <div className="container">

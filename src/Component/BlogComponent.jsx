@@ -85,25 +85,12 @@ function BlogComponent() {
                               <span className="text-[30px] lg:text-[40px] xl:text-[50px] font-medium text-ubuntu text-white bg-black p-[8px] lg:p-[15px]  rounded-[15px] lg:rounded-[20px] xl:w-[100px] xl:h-[100px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]">
                                 0{e.id}
                               </span>
-                              {/* <img
-                                className="bg-black p-[8px] lg:p-[15px]  rounded-[15px] lg:rounded-[20px] xl:w-[90px] xl:h-[90px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]"
-                                src={icon}
-                                alt=""
-                              /> */}
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  {/* <div className="w-[100%] relative">
-                    <img className="rounded-[15px]" src={e.img} alt="" />
-                    <div className="absolute bottom-0 right-0 xl:pl-[20px] xl:py-[25px] rounded-tl-[10px] lg:rounded-tl-[40px]   bg-white">
-                      <span className="text-[30px] lg:text-[40px] xl:text-[50px] font-medium text-ubuntu text-white bg-black xl:px-[22px] xl:py-[19px] px-[9px] py-[6px] rounded-[10px]  lg:rounded-[20px] xl:rounded-[35px] ">
-                        0{e.id}
-                      </span>
-                    </div>
-                  </div> */}
                   <h2 className="text-dark font-[AtypDisplay]  text-[18px] xl:text-24px xl:text-[28px] m-[3px] mt-[10px] xl:mb-[17px] uppercase">
                     {e.name}
                   </h2>

@@ -49,7 +49,7 @@ function Form() {
 
     const errors = {
       fio: formData.fio.trim() === "",
-      number: formData.number === null,
+      number: formData.number === Number,
       email: !EMAIL_REGEXP.test(formData.email),
       title: formData.title.trim() === "",
       description: formData.description.trim() === "",
