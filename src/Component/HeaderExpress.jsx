@@ -338,9 +338,7 @@ export default function HeaderComponent() {
           aria-label="Global"
         >
           <div className="">
-            <NavLink to="/" className="">
-              <img className="w-[133px] lg:w-[242px]" src={Logo} alt="" />
-            </NavLink>
+            <img className="w-[133px] lg:w-[242px]" src={Logo} alt="" />
           </div>
           <div className="flex xl:hidden">
             <button
