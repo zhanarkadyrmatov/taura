@@ -153,7 +153,7 @@ export default function HeaderComponent() {
         </nav>
         {mobileMenuOpen ? (
           <div className="xl:hidden">
-            <div className="fixed inset-y-0 top-[62px] lg:top-[98px] right-0 z-10 w-full overflow-y-auto bg-white px-6 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="fixed inset-y-0 top-[62px] lg:top-[98px] right-0 z-10 w-full overflow-y-auto bg-white px-6 py-2">
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="xl:hidden my-[20px] flex justify-center items-center gap-[20px]">
@@ -253,7 +253,7 @@ export default function HeaderComponent() {
                         }}
                         className="font-Ubuntu text-[#161616] text-[20px] font-medium  w-full rounded-[20px] text-center p-[10px]"
                       >
-                        <NavLink to={"#"}>{t("price")}</NavLink>
+                        <NavLink to={"/price"}>{t("price")}</NavLink>
                       </li>
                     </ul>
                   </div>
@@ -274,7 +274,6 @@ export default function HeaderComponent() {
             </div>
           </div>
         ) : null}
-
         <Modal handleOpen={handleOpen} setOpen={setOpen} open={open} />
       </div>
     </header>

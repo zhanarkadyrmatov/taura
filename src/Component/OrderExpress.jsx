@@ -506,14 +506,30 @@ function OrderExpress() {
             </p>
           </div>
           <div className="mt-[20px] xl:mt-[54px] flex flex-wrap justify-center items-center gap-[20px] lg:gap-[40px] lg:mx-[50px] xl:gap-[68px]">
-            <img className="lg:w-[192px] xl:w-[253px]" src={Ex10} alt="" />
-            <img className="lg:w-[167px] xl:w-[220px]" src={Ex11} alt="" />
-            <img className="lg:w-[170px] xl:w-[276px]" src={Ex12} alt="" />
-            <img className="lg:w-[164px] xl:w-[216px]" src={Ex13} alt="" />
-            <img className="lg:w-[116px] xl:w-[155px]" src={Ex15} alt="" />
-            <img className="lg:w-[174px] xl:w-[229px]" src={Ex16} alt="" />
-            <img className="lg:w-[134px] xl:w-[178px]" src={Ex17} alt="" />
-            <img className="lg:w-[122px] xl:w-[163px]" src={Ex18} alt="" />
+            <a href="#">
+              <img className="lg:w-[192px] xl:w-[253px]" src={Ex10} alt="" />
+            </a>
+            <a href="#">
+              <img className="lg:w-[167px] xl:w-[220px]" src={Ex11} alt="" />
+            </a>
+            <a href="#">
+              <img className="lg:w-[170px] xl:w-[276px]" src={Ex12} alt="" />
+            </a>
+            <a href="#">
+              <img className="lg:w-[164px] xl:w-[216px]" src={Ex13} alt="" />
+            </a>
+            <a href="#">
+              <img className="lg:w-[116px] xl:w-[155px]" src={Ex15} alt="" />
+            </a>
+            <a href="#">
+              <img className="lg:w-[174px] xl:w-[229px]" src={Ex16} alt="" />
+            </a>
+            <a href="#">
+              <img className="lg:w-[134px] xl:w-[178px]" src={Ex17} alt="" />
+            </a>
+            <a href="#">
+              <img className="lg:w-[122px] xl:w-[163px]" src={Ex18} alt="" />
+            </a>
           </div>
         </div>
       </div>

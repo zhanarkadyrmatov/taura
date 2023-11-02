@@ -8,6 +8,7 @@ import Logo3 from "../assets/link3.png";
 import Logo4 from "../assets/link4.png";
 import Logo5 from "../assets/link5.png";
 import Logo6 from "../assets/link6.png";
+import { ScrollToTopOnMount } from "../utils/ScrollToTopOnMount";
 
 const Items = [
   {
@@ -66,14 +67,7 @@ function ServicesInPage() {
   const handleOpen = () => {
     setOpen(!open);
   };
-  console.log(link);
-  function ScrollToTopOnMount() {
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
 
-    return null;
-  }
   return (
     <>
       <ScrollToTopOnMount />

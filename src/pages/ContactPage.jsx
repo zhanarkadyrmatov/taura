@@ -5,52 +5,46 @@ import Com from "../assets/compony.png";
 import { Textarea } from "@material-tailwind/react";
 import { Button } from "@material-tailwind/react";
 import axios from "axios";
+import { ScrollToTopOnMount } from "../utils/ScrollToTopOnMount";
+import { useForm } from "react-hook-form";
 
 function ContactPage() {
-  const [formData, setFormData] = useState({
-    fio: "",
-    email: "",
-    number: "",
-    theme: "Cargo",
-    title: "",
-    description: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm();
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
     try {
-      const response = await axios.post(
-        "http://192.168.89.3:8000/apps/feedback/",
-        formData,
-        {
-          headers: {
-            accept: "application/json",
-            "Content-Type": "application/json",
-            "X-CSRFToken":
-              "FPNJdEENE8WMklhM12bftQG4M6Y7J1rpr3gCW9hn5Wb0ArxLK9wlMAeDDchH5OIi",
-          },
-        }
+      const response = axios.post(
+        "http://192.168.89.10:8000/apps/feedback/",
+        data
       );
+      reset();
       console.log("Form submitted successfully:", response.data);
+      console.log(data);
     } catch (error) {
-      console.error("Error while submitting the form:", error);
       if (error.response) {
-        console.error("Error status:", error.response.status);
-        console.error("Error response data:", error.response.data);
+        console.error("Server responded with an error:", error.response.data);
+        console.error("Status Code:", error.response.status);
+        console.error("Response Headers:", error.response.headers);
       } else if (error.request) {
-        console.error("No response received:", error.request);
+        console.error(
+          "No response was received from the server:",
+          error.request
+        );
       } else {
-        console.error("Error:", error.message);
+        console.error("Error while setting up the request:", error.message);
       }
+      console.error("Error configuration:", error.config);
     }
-  };
-
-  const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
     <>
+      <ScrollToTopOnMount />
       <HeaderComponent />
       <div className="price mt-[100px] xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">
         <div className="container">
@@ -156,7 +150,84 @@ function ContactPage() {
                   Напишите нашим специалистам и получите бесплатную консультацию
                 </p>
               </div>
-              <form
+              <form onSubmit={handleSubmit(onSubmit)} action="">
+                {errors.fio && (
+                  <p className="text-red-600">Заполните это поле</p>
+                )}
+                <input
+                  className="lg:placeholder:text-[16px] placeholder:text-[#161616] placeholder:opacity-70 placeholder:font-[Atyp Display] placeholder:text-[14px] rounded-md lg:mb-[20px] mb-[10px] bg-opacity-50 bg-white p-[10px] w-full lg:rounded-[20px] xl:h-[60px]"
+                  type="text"
+                  placeholder="Имя и Фамилия"
+                  {...register("fio", { required: true })}
+                />
+                {errors.email && (
+                  <p className="text-red-600">Заполните это поле</p>
+                )}
+                <input
+                  className="lg:placeholder:text-[16px] placeholder:text-[#161616] placeholder:opacity-70 placeholder:font-[Atyp Display] placeholder:text-[14px] rounded-md lg:mb-[20px] mb-[10px] bg-opacity-50 bg-white p-[10px] w-full lg:rounded-[20px] xl:h-[60px]"
+                  type="text"
+                  placeholder="Email или номер телефона"
+                  {...register("email", { required: true })}
+                />
+
+                <div className="flex justify-between items-center  gap-[10px]">
+                  <div className="w-[100%]">
+                    <select
+                      {...register("theme")}
+                      className="rounded-md mb-[10px] bg-opacity-50 bg-white p-[10px] w-full lg:rounded-[20px] xl:h-[60px]"
+                      label=""
+                    >
+                      <option
+                        value="Cargo"
+                        className="text-[#161616] font-[Atyp Display]  opacity-70 text-[14px]"
+                      >
+                        Cargo
+                      </option>
+                      <option
+                        value="Forwarding"
+                        className="text-[#161616] font-[Atyp Display]  opacity-70 text-[14px]"
+                      >
+                        Forwarding
+                      </option>
+                    </select>
+                  </div>
+                  <div className="w-full">
+                    {errors.title && (
+                      <p className="text-red-600">Заполните это поле</p>
+                    )}
+                    <input
+                      className="w-50 lg:placeholder:text-[16px] placeholder:text-[#161616] placeholder:opacity-70 placeholder:font-[Atyp Display]  placeholder:text-[14px] rounded-md lg:mb-[20px] mb-[10px] bg-opacity-50 bg-white p-[10px] w-full lg:rounded-[20px] xl:h-[60px]"
+                      type="text"
+                      placeholder="Тема"
+                      {...register("title", { required: true })}
+                    />
+                  </div>
+                </div>
+
+                {errors.description && (
+                  <p className="text-red-600">Заполните это поле</p>
+                )}
+                <textarea
+                  className="min-h-[80px] lg:min-h-[130px] placeholder:text-[#161616] placeholder:opacity-70 placeholder:font-[Atyp Display] placeholder:text-[14px] rounded-md bg-opacity-50 lg:placeholder:text-[16px] bg-white p-[10px] w-full lg:rounded-[20px] xl:h-[60px]"
+                  color="blue"
+                  label=""
+                  placeholder="Сообщение"
+                  {...register("description", { required: true })}
+                />
+
+                <Button
+                  type="submit"
+                  className="text-center lg:text-[24px] w-full p-[15px] mt-[20px] bg-[#1355A3] lg:rounded-[20px] rounded-[10px]"
+                >
+                  {isSubmitting ? (
+                    <span className="animate-spin">Loading...</span>
+                  ) : (
+                    "Отправить"
+                  )}
+                </Button>
+              </form>
+
+              {/* <form
                 onSubmit={handleFormSubmit}
                 action=""
                 className="w-full lg:w-[530px] xl:w-[620px]"
@@ -224,7 +295,7 @@ function ContactPage() {
                 <Button className="text-center lg:text-[24px] w-full p-[15px] mt-[20px] bg-[#1355A3] lg:rounded-[20px] rounded-[10px]">
                   Отправить
                 </Button>
-              </form>
+              </form> */}
             </div>
           </div>
         </div>

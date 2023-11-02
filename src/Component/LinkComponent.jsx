@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Whatsapp from "../assets/whatsapp-icon.png";
 import Telegram from "../assets/telegram.png";
 import Instagram from "../assets/instagram.png";
 import Chat from "../assets/Chat.png";
+import { BsFillCapslockFill } from "react-icons/bs";
 
 const Link = [
   {
@@ -24,6 +25,27 @@ const Link = [
   },
 ];
 function LinkComponent() {
+  const [showToTopButton, setShowToTopButton] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setShowToTopButton(true);
+    } else {
+      setShowToTopButton(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="fixed z-10 top-[135px] lg:top-[235px] xl:top-[238px] right-[20px] lg:right-[20px] xl:right-[50px]">
       <ul>
@@ -43,11 +65,14 @@ function LinkComponent() {
             </li>
           );
         })}
-        {/* <li className="bg-white p-[14px] rounded-[20px] cursor-pointer shadow-md">
-          <a className="p-0" href="#">
-            <img src={Whatsapp} alt="" />
-          </a>
-        </li> */}
+        {showToTopButton && (
+          <button
+            className="bg-white p-[8px] lg:p-[14px] rounded-[10px] lg:rounded-[20px] cursor-pointer shadow-md mb-[20px] lg:mb-[30px]"
+            onClick={scrollToTop}
+          >
+            <BsFillCapslockFill className=" fill-[#29abee] w-[24px] h-[24px] lg:h-[32px] lg:w-[32px]" />
+          </button>
+        )}
       </ul>
     </div>
   );

@@ -100,7 +100,7 @@ function CardComponent() {
                 {newsData.map((e) => {
                   return (
                     <SwiperSlide key={e.id} className="w-[100%]">
-                      <Card props={e.image} />
+                      <Card props={e.image} id={e.id} />
                       <h2 className="text-dark font-[AtypDisplay]  text-[16px] lg:text-[20px] xl:text-[30px] lg:mt-[30px] mt-[10px]  leading-[185%]">
                         {e.title}
                       </h2>

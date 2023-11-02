@@ -6,6 +6,7 @@ import FooterExpress from "../Component/FooterExpress";
 import AccordionExpress from "../Component/AccordionExpress";
 import Blog2Express from "../Component/Blog2Express";
 import OrderExpress from "../Component/OrderExpress";
+import LinkComponent from "../Component/LinkComponent";
 
 function TauraExpressPage() {
   return (
@@ -17,6 +18,7 @@ function TauraExpressPage() {
       <Blog2Express />
       <AccordionExpress />
       <FooterExpress />
+      <LinkComponent />
     </div>
   );
 }

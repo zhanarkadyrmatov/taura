@@ -4,6 +4,7 @@ import FooterComponent from "../Component/FooterComponent";
 import { fetchQuestion } from "../api/question";
 import { useQuery } from "react-query";
 import Loading from "../utils/Loading";
+import { ScrollToTopOnMount } from "../utils/ScrollToTopOnMount";
 
 function QuestionPage() {
   const { isLoading, isError, data } = useQuery("fetchQuestion", fetchQuestion);
@@ -15,6 +16,7 @@ function QuestionPage() {
   console.log(data);
   return (
     <>
+      <ScrollToTopOnMount />
       <HeaderComponent />
       {isLoading ? (
         <Loading />

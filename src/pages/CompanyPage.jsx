@@ -11,6 +11,7 @@ import User1 from "../assets/com1.png";
 import User2 from "../assets/com2.png";
 import User3 from "../assets/com3.png";
 import User4 from "../assets/com4.png";
+import { ScrollToTopOnMount } from "../utils/ScrollToTopOnMount";
 
 const user = [
   {
@@ -66,6 +67,7 @@ const user = [
 function CompanyPage() {
   return (
     <>
+      <ScrollToTopOnMount />
       <HeaderComponent />
       <main className="mt-[100px] mb-[40px] lg:mb-[70px] xl:mb-[100px]">
         <div className="companypage xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">

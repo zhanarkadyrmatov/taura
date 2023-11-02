@@ -1,15 +1,9 @@
 import React, { useEffect } from "react";
 import HeaderComponent from "../Component/HeaderComponent";
 import FooterComponent from "../Component/FooterComponent";
+import { ScrollToTopOnMount } from "../utils/ScrollToTopOnMount";
 
 function PricePage() {
-  function ScrollToTopOnMount() {
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
-
-    return null;
-  }
   return (
     <>
       <ScrollToTopOnMount />

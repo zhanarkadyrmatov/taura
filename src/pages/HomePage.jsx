@@ -10,10 +10,12 @@ import AccordionComponent from "../Component/AccordionComponent";
 import FooterComponent from "../Component/FooterComponent";
 import CardComponent from "../Component/CardComponent";
 import LinkComponent from "../Component/LinkComponent";
+import { ScrollToTopOnMount } from "../utils/ScrollToTopOnMount";
 
 function HomePage() {
   return (
     <>
+      <ScrollToTopOnMount />
       <HeaderComponent />
       <HeroComponent />
       <BlogComponent />

@@ -7,6 +7,7 @@ import { useQuery } from "react-query";
 import { fetchNews } from "../api/news";
 import Loading from "../utils/Loading";
 import { Paginate } from "../utils/Paginate";
+import { ScrollToTopOnMount } from "../utils/ScrollToTopOnMount";
 
 function NewsPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,6 +30,7 @@ function NewsPage() {
 
   return (
     <>
+      <ScrollToTopOnMount />
       <HeaderComponent />
 
       {isLoading ? (
@@ -91,7 +93,7 @@ function NewsPage() {
                               <div className="absolute bottom-0 right-0 lg:bottom-[10px] lg:right-[10px]">
                                 <NavLink
                                   className="cursor-pointer"
-                                  to={"/news/:id"}
+                                  to={`/news/${e.id}`}
                                 >
                                   <img
                                     className="bg-black p-[8px] lg:p-[15px]  rounded-[15px] lg:rounded-[20px] xl:w-[90px] xl:h-[90px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px]"

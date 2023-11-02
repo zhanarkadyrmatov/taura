@@ -21,6 +21,7 @@ export function Modal({ handleOpen, open }) {
               style={{
                 boxShadow: "0px 0px 10px 0px #fff",
               }}
+              handleOpen={handleOpen}
             />
           </div>
         </>

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Collapse } from "react-collapse";
 import { HiMinus, HiPlus } from "react-icons/hi2";
+import { useQuery } from "react-query";
+import { fetchQuestion } from "../api/question";
+import { Paginate } from "../utils/Paginate";
+
 const items = [
   {
     id: 1,
@@ -56,6 +60,21 @@ function AccordionExpress() {
       setOpenItemId(itemId);
     }
   };
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const { isLoading, isError, data } = useQuery(["question", currentPage], () =>
+    fetchQuestion({ page: currentPage })
+  );
+  const newsPerPage = 4;
+  if (isError) {
+    return <div>Error: {isError.message}</div>;
+  }
+  const question = data || [];
+  const indexOfLastNews = currentPage * newsPerPage;
+  const indexOfFirstNews = indexOfLastNews - newsPerPage;
+  const currentNews = question.slice(indexOfFirstNews, indexOfLastNews);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <div className="accordion pt-[50px] pb-[30px] lg:py-[70px] xl:mt-[40px] xl:pt-[120px] xl:mb-[50px]  my-[10px]">
       <div className="max-w-[1570px] lg:px-[30px] xl:mx-auto">
@@ -76,7 +95,7 @@ function AccordionExpress() {
             ut aenean.
           </p>
           <div className="flex justify-center flex-col items-center">
-            {items.map((item) => {
+            {currentNews.map((item) => {
               return (
                 <div
                   className="mb-[16px]  lg:mb-[26px] xl:mb-[30px] lg:w-[860px] xl:w-[1000px]"
@@ -115,6 +134,15 @@ function AccordionExpress() {
                 </div>
               );
             })}
+          </div>
+          <div className="flex justify-center items-center">
+            <Paginate
+              currentPage={currentPage}
+              newsPerPage={newsPerPage}
+              totalNews={question.length}
+              paginate={paginate}
+              isLoading={isLoading}
+            />
           </div>
         </div>
       </div>

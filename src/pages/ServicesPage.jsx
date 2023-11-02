@@ -5,6 +5,7 @@ import Slide1 from "../assets/slide1.png";
 import Slide2 from "../assets/slide2.png";
 import Slide3 from "../assets/slide3.png";
 import { NavLink } from "react-router-dom";
+import { ScrollToTopOnMount } from "../utils/ScrollToTopOnMount";
 const Slide = [
   {
     id: 1,
@@ -46,6 +47,7 @@ const Slide = [
 function ServicesPage() {
   return (
     <>
+      <ScrollToTopOnMount />
       <HeaderComponent />
       <main className="mb-[40px] mt-[100px]  lg:mb-[70px] xl:mb-[100px]">
         <div className="services xl:py-[100px] py-[60px] lg:py-[80px] mb-[40px] lg:mb-[70px] xl:mb-[120px]">

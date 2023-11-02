@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/footerLogo.png";
 import Logo1 from "../assets/Oracle.png";
-import { MapContainer, TileLayer } from "react-leaflet";
+
 import { NavLink } from "react-router-dom";
 
 function FooterComponent() {
@@ -219,7 +219,7 @@ function FooterComponent() {
                 </h3>
                 <div className="w-full relative  ">
                   <a
-                    href="#"
+                    href="https://www.google.com/maps/@42.8673036,74.5919356,21z?hl=ru&entry=ttu"
                     className="bg-[#000] w-full h-full opacity-50 absolute top-0 flex justify-center items-center xl:text-[26px] text-[#fff] leading-normal font-normal font-[AtypDisplay]"
                   >
                     Посмотреть на 2GIS
